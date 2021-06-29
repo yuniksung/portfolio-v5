@@ -1,0 +1,33 @@
+@import './mixin';
+
+.navbar{
+    width: 100%;
+    height: 10vh;
+
+    ul{
+        @include flexCent;
+        background-color: $nav;
+        :hover{
+            background-color: $btn-hover;
+        }
+
+        a{
+            text-decoration: none;
+            color:  gray;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            li{
+                padding: 20px 120px;
+                list-style: none;
+    
+    
+    
+    
+            }
+
+        }
+        
+  
+    }
+}

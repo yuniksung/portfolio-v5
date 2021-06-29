@@ -1,0 +1,23 @@
+$pastel-blue: #7AA0CB;
+$pastel-blue2: #93B3CF;
+$white: #fff;
+
+$nav: #ebedf0;
+$btn-hover: #dcdcdc;
+
+$btn-color:#C1D1DB;
+
+// mixin functions. - flex-box;
+
+@mixin flexCent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexColumnStart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
