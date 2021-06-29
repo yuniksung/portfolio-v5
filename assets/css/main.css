@@ -1,14 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 .hero {
-  min-width: 100vw;
+  max-width: 100vw;
   height: 40vh;
-  background: linear-gradient(45deg, #7AA0CB 50%, #93B3CF 70%);
 }
 
-.hero .hero-text {
+.hero .hero-bg {
+  max-width: 100vw;
+  height: 40vh;
+  background-image: url("https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1047&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .hero-bg .hero-text {
   height: 100%;
-  width: 40%;
+  width: 75%;
   margin: auto;
   font-family: 'Roboto Mono', sans-serif;
   display: flex;
@@ -18,16 +25,19 @@
   color: #fff;
 }
 
-.hero .hero-text h1 {
+.hero .hero-bg .hero-text h1 {
   font-size: 3rem;
+  font-weight: 700;
 }
 
-.hero .hero-text p {
+.hero .hero-bg .hero-text p {
   font-size: 1.2rem;
   margin: 2px 0;
+  width: 60%;
+  font-weight: 558;
 }
 
-.hero .hero-text button {
+.hero .hero-bg .hero-text button {
   width: 100px;
   padding: 5px 10px;
   margin-top: 10px;
@@ -48,18 +58,17 @@ body {
 
 .navbar {
   width: 100%;
-  height: 10vh;
 }
 
 .navbar ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ebedf0;
+  background-color: #dadada;
 }
 
 .navbar ul :hover {
-  background-color: #dcdcdc;
+  background-color: #ebebeb;
 }
 
 .navbar ul a {
@@ -72,5 +81,67 @@ body {
 .navbar ul a li {
   padding: 20px 120px;
   list-style: none;
+}
+
+#about-me {
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f5f7;
+}
+
+#about-me .me-description {
+  width: 30%;
+  margin: 0 3% 0 auto;
+}
+
+#about-me .me-description h1 {
+  width: 140px;
+  background: linear-gradient(45deg, #f0f5f7 90%, #7AA0CB 80%);
+  text-transform: uppercase;
+}
+
+#about-me .me-description h1:hover {
+  background: linear-gradient(45deg, #f0f5f7 90%, #0360ca 80%);
+}
+
+#about-me .me-description p {
+  letter-spacing: 1px;
+  line-height: 140%;
+}
+
+#about-me .me-description p span {
+  color: #268d43;
+  font-weight: 600;
+}
+
+#about-me .skills {
+  width: 40%;
+  margin: 0 auto 0 3%;
+  display: flex;
+}
+
+#about-me .skills .skill-tree {
+  padding: 0 30px;
+}
+
+#about-me .skills .skill-tree h3 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: 2px;
+  background: linear-gradient(45deg, #C1D1DB 75%, #f0f5f7 80%);
+}
+
+#about-me .skills .skill-tree ul li {
+  width: 150px;
+  list-style: none;
+  padding: 2px 0;
+  letter-spacing: 1px;
+}
+
+#about-me .skills .skill-tree ul li:hover {
+  background-color: #ebebeb;
 }
 /*# sourceMappingURL=main.css.map */
