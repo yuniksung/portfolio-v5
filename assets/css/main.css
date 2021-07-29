@@ -1,33 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 .hero {
-  min-width: 100vw;
-  height: 40vh;
-  background: linear-gradient(45deg, #7AA0CB 50%, #93B3CF 70%);
+  max-width: 80vw;
+  height: 60vh;
+  margin: auto;
+  margin-top: 10rem;
+  padding: 3rem;
 }
 
-.hero .hero-text {
+.hero .hero-shape {
+  width: 100%;
   height: 100%;
-  width: 40%;
+  border-radius: 50px;
+  background: url("../images/hero1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero .hero-shape .bg {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all 1.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: linear-gradient(45deg, #7aa0cb8c 50%, #93b3cf7e 70%);
+  border-radius: 50px;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-shape .bg:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.hero .hero-shape .hero-text {
+  width: 60%;
   margin: auto;
   font-family: 'Roboto Mono', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   color: #fff;
 }
 
-.hero .hero-text h1 {
+.hero .hero-shape .hero-text h1 {
   font-size: 3rem;
 }
 
-.hero .hero-text p {
+.hero .hero-shape .hero-text p {
   font-size: 1.2rem;
   margin: 2px 0;
 }
 
-.hero .hero-text button {
+.hero .hero-shape .hero-text button {
   width: 100px;
   padding: 5px 10px;
   margin-top: 10px;
@@ -44,33 +67,211 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  background-color: #fff;
 }
 
 .navbar {
+  margin: 2rem;
   width: 100%;
-  height: 10vh;
+  height: 5vh;
 }
 
 .navbar ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ebedf0;
-}
-
-.navbar ul :hover {
-  background-color: #dcdcdc;
+  height: 100%;
 }
 
 .navbar ul a {
+  margin: 2rem;
+  border: 1px dashed rgba(0, 0, 0, 0.315);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   text-decoration: none;
   color: gray;
   font-weight: 600;
   text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.navbar ul a:hover {
+  box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.16), 0 1.5px 3px rgba(0, 0, 0, 0.23);
 }
 
 .navbar ul a li {
-  padding: 20px 120px;
+  padding: 0 120px;
   list-style: none;
+}
+
+#about-me {
+  max-width: 80vw;
+  height: 100vh;
+  margin: auto;
+  margin-top: 10rem;
+  padding: 3rem;
+}
+
+#about-me .wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#about-me .wrapper .cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+#about-me .wrapper .cards .card {
+  width: 200px;
+  height: 250px;
+  border: 1px solid gray;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: linear-gradient(50deg, #e3ebf596 20%, #fff 40%);
+  transform: perspective(3000px) rotateY(5deg);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  transition: transform 1s ease 0s;
+}
+
+#about-me .wrapper .cards .card:hover {
+  transform: perspective(1500px) rotateY(15deg);
+}
+
+#about-me .wrapper .cards .card .icon {
+  width: 50%;
+  height: 50%;
+  margin-top: -8rem;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-me .wrapper .cards .card .icon i {
+  font-size: 2.5rem;
+}
+
+#about-me .wrapper .cards .card .texts {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#about-me .wrapper .cards .card .texts h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+#about-me .wrapper .cards .card .texts p {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+#about-me .wrapper .me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-me .wrapper .me .tellMe {
+  width: 40%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#about-me .wrapper .me .tellMe h1 {
+  font-size: 2rem;
+}
+
+#about-me .wrapper .me .tellMe h1 span {
+  font-weight: 400;
+}
+
+#about-me .wrapper .me .tellMe p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+
+#about-me .wrapper .me .tellMe p span {
+  color: #618bcf;
+}
+
+#about-me .wrapper .me .tellMe .btns {
+  margin-top: 20px;
+}
+
+#about-me .wrapper .me .tellMe .btns a {
+  margin-right: 50px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+#about-me .wrapper .me .skills {
+  width: 50%;
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: linear-gradient(50deg, #e3ebf596 20%, #fff 80%);
+  transform: perspective(3000px) rotateY(5deg);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  transition: transform 1s ease 0s;
+  border: 1px solid #a1a1a1;
+}
+
+#about-me .wrapper .me .skills:hover {
+  transform: perspective(1500px) rotateY(-5deg);
+}
+
+#about-me .wrapper .me .skills h2 {
+  text-align: center;
+}
+
+#about-me .wrapper .me .skills .skill-sets {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+#about-me .wrapper .me .skills .skill-sets ul {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#about-me .wrapper .me .skills .skill-sets ul li {
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 1.1rem;
+  list-style-type: none;
+  margin: 5px 0;
 }
 /*# sourceMappingURL=main.css.map */

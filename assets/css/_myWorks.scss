@@ -1,0 +1,98 @@
+@import './mixin';
+
+#my-works{
+    width: 100%;
+    height: 100vh;
+    background-color: $defaultbg-1;
+    
+    .myworks-wrapper{
+        width: 70%;
+        height: 100%;
+        margin: auto;
+        padding: 20vh 0;
+
+        h1{
+            font-size: 2rem;
+            width: 200px;
+            // background: linear-gradient(45deg, $default 90%, #7AA0CB 80%);
+            text-transform: uppercase;
+            padding-bottom: 20px;
+        }
+
+        .item-box{
+            width: 45vw;
+            display: flex;
+            height: 45vh;
+
+            
+            .content-img{
+                
+                
+            }
+
+            .content-text{
+                width: 400px;
+                overflow: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+
+                .content-header{
+                    height: 6rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    text-transform: uppercase;
+
+
+                    h3{
+                        text-transform: uppercase;
+                        
+                    }
+    
+                    h4{
+                        padding: 0 2rem;
+                    }
+
+                    a{
+                        font-size: 1.2rem;
+                        padding: 0 5px;
+                        text-decoration: none;
+                        color: #000
+
+                        
+                    }
+                }
+
+                p{
+                    padding: 0 1rem;
+                    letter-spacing: 1px;
+                    line-height: 120%;
+
+                    &::first-letter{
+                        text-transform: uppercase;
+                    }
+
+                }
+
+                ul{
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    
+                    li{
+                        padding: 5px;
+                        list-style: none;
+
+                    }
+                }
+            }
+
+            
+        }
+    }
+}

@@ -7,6 +7,49 @@ $btn-hover: #dcdcdc;
 
 $btn-color:#C1D1DB;
 
+// box-shadow
+$boxShadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$hoveredBoxShadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+// transition
+$boxHoverEffect:  all 0.3s cubic-bezier(.25,.8,.25,1);
+
+
+// Hovering effects
+@mixin containerShadow{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 1.35s cubic-bezier(.25,.8,.25,1);
+
+    &:hover{
+        box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+}
+
+// Hovering effects
+@mixin hoverEffect2{
+
+    transform: perspective(3000px) rotateY(5deg);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+  
+    &:hover {
+        transform: perspective(1500px) rotateY(15deg);
+    }
+}
+@mixin hoverEffect3{
+
+    transform: perspective(3000px) rotateY(5deg);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+  
+    &:hover {
+        transform: perspective(1500px) rotateY(-5deg);
+    }
+}
+
+
+
 // mixin functions. - flex-box;
 
 @mixin flexCent{
@@ -20,4 +63,27 @@ $btn-color:#C1D1DB;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+
+
+
+
+
+// Global functions
+@mixin globalContainer{
+    max-width: 80vw;
+    height: 60vh;
+    margin: auto; 
+    margin-top: 10rem;
+    padding: 3rem;
+}
+
+@mixin globalShape{
+    @include containerShadow;
+    background: linear-gradient(45deg, #7aa0cb8c 50%, #93b3cf7e 70%);
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    @include flexCent;
 }
