@@ -1,62 +1,130 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-.hero {
-  max-width: 80vw;
-  height: 60vh;
-  margin: auto;
-  margin-top: 10rem;
-  padding: 3rem;
-}
-
-.hero .hero-shape {
+header {
+  height: 70vh;
   width: 100%;
-  height: 100%;
-  border-radius: 50px;
-  background: url("../images/hero1.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-.hero .hero-shape .bg {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  transition: all 1.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-  background: linear-gradient(45deg, #7aa0cb8c 50%, #93b3cf7e 70%);
-  border-radius: 50px;
-  height: 100%;
-  width: 100%;
-  margin: auto;
+  background-color: #68A4D5;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.hero .hero-shape .bg:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-.hero .hero-shape .hero-text {
-  width: 60%;
-  margin: auto;
-  font-family: 'Roboto Mono', sans-serif;
-  color: #fff;
-}
-
-.hero .hero-shape .hero-text h1 {
-  font-size: 3rem;
-}
-
-.hero .hero-shape .hero-text p {
-  font-size: 1.2rem;
-  margin: 2px 0;
-}
-
-.hero .hero-shape .hero-text button {
-  width: 100px;
-  padding: 5px 10px;
-  margin-top: 10px;
-  border: none;
+header .hero-wrapper {
+  overflow: hidden;
+  width: 30vw;
+  height: 15vh;
+  background-color: #fff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: height 0.5s ease-in-out;
   cursor: pointer;
-  background-color: #C1D1DB;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+header .hero-wrapper .unshow-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+header .hero-wrapper .unshow-box .inactive {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header .hero-wrapper .unshow-box .inactive .my-pic {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+header .hero-wrapper .unshow-box .inactive .my-pic img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header .hero-wrapper .unshow-box .inactive .hero-textBox {
+  margin-left: 40px;
+  padding-left: 20px;
+  border-left: 1px solid lightgray;
+}
+
+header .hero-wrapper .unshow-box .inactive .hero-textBox h2 {
+  font-size: 2rem;
+  letter-spacing: 1.1px;
+}
+
+header .hero-wrapper .unshow-box .inactive .hero-textBox h3 {
+  font-size: 1rem;
+  padding: 10px 0;
+  letter-spacing: 1.1px;
+}
+
+header .hero-wrapper .unshow-box .down-icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 150px;
+  height: 100%;
+  transition: transform 0.35s;
+}
+
+header .hero-wrapper .unshow-box .down-icon i {
+  font-size: 2.5rem;
+}
+
+header .hero-wrapper .show-box {
+  border-top: 1px solid #e4e4e4;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: 3s;
+  padding: 20px;
+}
+
+header .active {
+  height: 45vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+header .active .show-box {
+  height: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: 3s;
+}
+
+header .active .show-box p {
+  font-size: 1.2rem;
+  line-height: 120%;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+
+header .active .show-box p span {
+  color: #cf6161;
+  font-weight: 500;
+}
+
+header .active .down-icon {
+  transition: transform 0.35s;
+}
+
+header .active .down-icon i {
+  transform: rotate(180deg);
 }
 
 * {
@@ -72,9 +140,11 @@ body {
 }
 
 .navbar {
-  margin: 2rem;
   width: 100%;
   height: 5vh;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: fixed;
+  background-color: #fff;
 }
 
 .navbar ul {
@@ -85,8 +155,7 @@ body {
 }
 
 .navbar ul a {
-  margin: 2rem;
-  border: 1px dashed rgba(0, 0, 0, 0.315);
+  margin: 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
