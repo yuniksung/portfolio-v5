@@ -8,7 +8,7 @@ header{
     background: url("../images/hero1.jpg");
     background-position: center;
     background-size:cover;
-    border-bottom: 5px solid #358acf;
+
     @include pageDefaultSetting;
 
     // Not toggled
@@ -114,28 +114,7 @@ header{
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-
-        // .show-box{
-        //     height: 100%;
-        //     margin-top: 20px;
-        //     display: flex;
-        //     flex-direction: column;
-        //     transition: 3s;
-
-
-        //     p{
-        //         font-size: 1.2rem;
-        //         line-height: 120%;
-        //         margin-top: 1rem;
-        //         letter-spacing: 1px;
-
-        //         span{
-        //             color: #cf6161;
-        //             font-weight: 500;
-        //         }
-        //     }
-        // }
-
+        
         // icon upside down
         .down-icon{
             transition: transform 0.35s;
