@@ -3,8 +3,13 @@
 header{
     height: 70vh;
     width: 100%;
-    background-color: #68A4D5;
+    // background-color: #68A4D5;
     @include flexCent;
+    background: url("../images/hero1.jpg");
+    background-position: center;
+    background-size:cover;
+    border-bottom: 5px solid #358acf;
+    @include pageDefaultSetting;
 
     // Not toggled
     .hero-wrapper{
@@ -79,31 +84,13 @@ header{
         }
 
         .show-box{
-            border-top: 1px solid rgb(228, 228, 228);
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            transition: 3s;
-            padding: 20px;
-        }
-
-    }
-
-
-    // Toggled
-    .active{
-        height: 45vh;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-
-        .show-box{
             height: 100%;
             margin-top: 20px;
             display: flex;
             flex-direction: column;
             transition: 3s;
-
+            border-top: 1px solid lightgray;
+            padding: 20px;
 
             p{
                 font-size: 1.2rem;
@@ -117,6 +104,37 @@ header{
                 }
             }
         }
+
+    }
+
+
+    // Toggled
+    .active{
+        height: 45vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        // .show-box{
+        //     height: 100%;
+        //     margin-top: 20px;
+        //     display: flex;
+        //     flex-direction: column;
+        //     transition: 3s;
+
+
+        //     p{
+        //         font-size: 1.2rem;
+        //         line-height: 120%;
+        //         margin-top: 1rem;
+        //         letter-spacing: 1px;
+
+        //         span{
+        //             color: #cf6161;
+        //             font-weight: 500;
+        //         }
+        //     }
+        // }
 
         // icon upside down
         .down-icon{

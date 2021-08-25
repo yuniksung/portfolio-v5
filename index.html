@@ -12,17 +12,17 @@
     <!-- Navigation -->
     <div class="navbar">
         <ul>
-            <a href="/">
+            <a href="#home">
                 <li>Home</li>
             </a>
-            <a href="#about-me">
+            <a href="#about">
                 <li>About</li>
             </a>
             <a href="#my-works">
                 <li>Projects</li>
             </a>
-            <a href="#contact">
-                <li>Contacts</li>
+            <a href="">
+                <li class="resume-nav">Resume</li>
             </a>
             <a href="#contact">
                 <li>Contacts</li>
@@ -31,7 +31,7 @@
     </div>
 
     <!-- Hero -->
-    <header>
+    <header id="home">
         <div id="showMe" class="hero-wrapper">
             <div class="unshow-box">
                 <div class="inactive">
@@ -57,103 +57,89 @@
             </div>
         </div>
     </header>
-    <!-- <div class="hero" id="home">
-        <div class="hero-shape">
-            <div class="bg">
-                <div class="hero-text">
-                    <h1>Yunik Sung</h1>
-                    <p>Full Stack Web Developer</p>
-                    <p>Motivated, Easily Adaptable, Team Motivation, Problem Solveing, Leadership, Teamwork, Project Management Skill . . . and even more</p>
-                </div>
-            </div>
-        </div>
-
-    </div> -->
-
+    
     <!-- About me section -->
-    <section id="about-me">
-        <div class="wrapper">
-            <div class="cards">
-                <div class="card">
-                    <div class="icon">
-                        <i class="fas fa-fighter-jet"></i>
-                    </div>
-                    <div class="texts">
-                        <h4>Fast Learner</h4>
-                        <p>Display an ability to learn rapidly and adapt quickly to changing situations
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <div class="texts">
-                        <h4>Project Management</h4>
-                        <p>Effectively blend management skills with technical expertise
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="icon">
-                        <i class="fas fa-exclamation-circle"></i>
-
-                    </div>
-                    <div class="texts">
-                        <h4>Problem Solver</h4>
-                        <p>Excels in creative thinking and problem solving</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="icon">
-                        <i class="fas fa-tasks"></i>
-
-                    </div>
-                    <div class="texts">
-                        <h4>Motivation</h4>
-                        <p>Strive for maximum drive in fulfilling job responsibilities
-                        </p>
-                    </div>
-                </div>
+    <article id="about" class="about">
+        <section class="wrapper">
+            <div class="header">
+                <h1>
+                    More About Myself
+                </h1>
             </div>
-
-            <div class="me">
-                <div class="tellMe">
-                    <div class="btns">
-                        <a href="mailto:yuniksung@gmail.com" rel="noreferrer">Contact</a>
-                        <a target="_blank" rel="noreferrer" href="/portfolio-v4/Yunik_Resume.pdf">Resume</a>
+            <article class="about-box">
+                <section class="talents mybox">
+                    <h3>Talents</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <i class="fas fa-fighter-jet"></i>
+                            <div class="card-text">
+                                <h4>Fast Learner</h4>
+                                <p>Display an ability to learn rapidly and adapt quickly to changing situations
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-user-shield"></i>
+                            <div class="card-text">
+                                <h4>Project Management</h4>
+                                <p>Effectively blend management skills with technical expertise
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <div class="card-text">
+                                <h4>Problem Solver</h4>
+                                <p>Excels in creative thinking and problem solving</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-tasks"></i>
+                            <div class="card-text">
+                                <h4>Motivation</h4>
+                                <p>Strive for maximum drive in fulfilling job responsibilities
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="skills">
-                    <h2>Very Confident : </h2>
-                    <div class="skill-sets">
-                        <ul>    Front End
+                </section>
+                <section class="skills mybox">
+                    <h3>Skills</h3>
+                    <div class="skill-list">
+                        <ul>
+                            <li>FRONT ENDS</li>
                             <li>HTML</li>
                             <li>CSS</li>
+                            <li>SASS/LESS</li>
                             <li>JAVASCRIPT</li>
-                            <li>REACT</li>
-                            <li>SASS/ LESS</li>
-                            <li>Styled-Components</li>
+                            <li>REACT.JS</li>
                         </ul>
-                        <ul>    Back End
+                        <ul>
+                            <li>BACK ENDS</li>
                             <li>NODE.JS</li>
+                            <li>EXPRESS.JS</li>
                             <li>MYSQL</li>
                         </ul>
-                        <ul>    Other
-                            <li>Heroku</li>
-                            <li>Git</li>
-                            <li>Adobe Photoshop</li>
-                            <li>Adobe AfterEffects</li>
+                        <ul>
+                            <li>OTHERS</li>
+                            <li>HEROKU</li>
+                            <li>GIT</li>
+                            <li>ADOBE SUITES</li>
+                            <li>MICROSOFT SUITES</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </section>
+            </article>
+        </section>
+    </article>
 
     <!-- list of my works -->
     <main id="my-works">
-
+        <aside class="main-side">
+            <h1>
+                Projects
+            </h1>
+        </aside>
     </main>
 
     <!-- footer with all my contact information -->

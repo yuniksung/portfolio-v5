@@ -87,3 +87,15 @@ $boxHoverEffect:  all 0.3s cubic-bezier(.25,.8,.25,1);
     margin: auto;
     @include flexCent;
 }
+
+
+@mixin wrapperDefaultSetting{
+    height: 100%;
+    width: 70%;
+    margin: auto;
+    padding-top: 75px; 
+}
+
+@mixin pageDefaultSetting{
+    box-shadow:2px 8px 10px rgba(0,0,0,0.22);
+}

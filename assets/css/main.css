@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 header {
   height: 70vh;
   width: 100%;
-  background-color: #68A4D5;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url("../images/hero1.jpg");
+  background-position: center;
+  background-size: cover;
+  border-bottom: 5px solid #358acf;
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.22);
 }
 
 header .hero-wrapper {
@@ -84,12 +88,25 @@ header .hero-wrapper .unshow-box .down-icon i {
 }
 
 header .hero-wrapper .show-box {
-  border-top: 1px solid #e4e4e4;
+  height: 100%;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   transition: 3s;
+  border-top: 1px solid lightgray;
   padding: 20px;
+}
+
+header .hero-wrapper .show-box p {
+  font-size: 1.2rem;
+  line-height: 120%;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+
+header .hero-wrapper .show-box p span {
+  color: #cf6161;
+  font-weight: 500;
 }
 
 header .active {
@@ -97,26 +114,6 @@ header .active {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-}
-
-header .active .show-box {
-  height: 100%;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  transition: 3s;
-}
-
-header .active .show-box p {
-  font-size: 1.2rem;
-  line-height: 120%;
-  margin-top: 1rem;
-  letter-spacing: 1px;
-}
-
-header .active .show-box p span {
-  color: #cf6161;
-  font-weight: 500;
 }
 
 header .active .down-icon {
@@ -131,6 +128,7 @@ header .active .down-icon i {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -140,6 +138,7 @@ body {
 }
 
 .navbar {
+  z-index: 999;
   width: 100%;
   height: 5vh;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -155,7 +154,6 @@ body {
 }
 
 .navbar ul a {
-  margin: 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,175 +170,131 @@ body {
 }
 
 .navbar ul a li {
-  padding: 0 120px;
+  padding: 0 70px;
   list-style: none;
 }
 
-#about-me {
-  max-width: 80vw;
-  height: 100vh;
-  margin: auto;
-  margin-top: 10rem;
-  padding: 3rem;
+.navbar ul a .resume-nav {
+  color: #3659b8;
 }
 
-#about-me .wrapper {
-  height: 100%;
+.about {
+  width: 100%;
+  height: 80vh;
   display: flex;
-  justify-content: space-around;
+  border-bottom: 5px solid #ce6767;
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.22);
+}
+
+.about .wrapper {
+  height: 100%;
+  width: 70%;
+  margin: auto;
+  padding-top: 75px;
+  display: flex;
   flex-direction: column;
 }
 
-#about-me .wrapper .cards {
+.about .wrapper .header {
+  width: 35%;
+  height: auto;
+}
+
+.about .wrapper .header h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+
+.about .wrapper .about-box {
+  margin-top: 60px;
+  width: 100%;
+  height: 60%;
   display: flex;
   justify-content: space-between;
-  margin: 2rem;
+  align-items: center;
 }
 
-#about-me .wrapper .cards .card {
-  width: 200px;
-  height: 250px;
-  border: 1px solid gray;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.about .wrapper .about-box .mybox {
+  margin: 20px;
+  width: 45%;
+  height: 100%;
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all 1.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.about .wrapper .about-box .mybox:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  background: linear-gradient(50deg, #e3ebf596 20%, #fff 40%);
-  transform: perspective(3000px) rotateY(5deg);
-  border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-  transition: transform 1s ease 0s;
 }
 
-#about-me .wrapper .cards .card:hover {
-  transform: perspective(1500px) rotateY(15deg);
-}
-
-#about-me .wrapper .cards .card .icon {
-  width: 50%;
-  height: 50%;
-  margin-top: -8rem;
-  border-radius: 50%;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#about-me .wrapper .cards .card .icon i {
-  font-size: 2.5rem;
-}
-
-#about-me .wrapper .cards .card .texts {
-  width: 100%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#about-me .wrapper .cards .card .texts h4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.1rem;
-}
-
-#about-me .wrapper .cards .card .texts p {
-  margin: 1.5rem 0;
-  text-align: center;
-}
-
-#about-me .wrapper .me {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#about-me .wrapper .me .tellMe {
-  width: 40%;
-  height: 80%;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-#about-me .wrapper .me .tellMe h1 {
+.about .wrapper .about-box .mybox h3 {
   font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
-#about-me .wrapper .me .tellMe h1 span {
-  font-weight: 400;
+.about .wrapper .about-box .talents {
+  display: flex;
+  flex-direction: column;
 }
 
-#about-me .wrapper .me .tellMe p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
+.about .wrapper .about-box .talents .cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.about .wrapper .about-box .talents .cards .card {
+  display: flex;
+  margin-top: 15px;
+}
+
+.about .wrapper .about-box .talents .cards .card i {
+  height: 15%;
+  width: 10%;
+  font-size: 25px;
+}
+
+.about .wrapper .about-box .talents .cards .card .card-text {
+  width: 80%;
+}
+
+.about .wrapper .about-box .talents .cards .card .card-text h4 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.about .wrapper .about-box .talents .cards .card .card-text p {
+  margin-top: 2px;
   letter-spacing: 1px;
 }
 
-#about-me .wrapper .me .tellMe p span {
-  color: #618bcf;
-}
-
-#about-me .wrapper .me .tellMe .btns {
-  margin-top: 20px;
-}
-
-#about-me .wrapper .me .tellMe .btns a {
-  margin-right: 50px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  color: inherit;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px 15px;
-}
-
-#about-me .wrapper .me .skills {
-  width: 50%;
-  padding: 2rem;
-  border-radius: 20px;
+.about .wrapper .about-box .skills {
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
-  background: linear-gradient(50deg, #e3ebf596 20%, #fff 80%);
-  transform: perspective(3000px) rotateY(5deg);
-  border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-  transition: transform 1s ease 0s;
-  border: 1px solid #a1a1a1;
 }
 
-#about-me .wrapper .me .skills:hover {
-  transform: perspective(1500px) rotateY(-5deg);
-}
-
-#about-me .wrapper .me .skills h2 {
-  text-align: center;
-}
-
-#about-me .wrapper .me .skills .skill-sets {
+.about .wrapper .about-box .skills .skill-list {
   display: flex;
-  justify-content: space-around;
-  padding: 20px;
 }
 
-#about-me .wrapper .me .skills .skill-sets ul {
-  font-weight: bold;
-  font-size: 1.2rem;
+.about .wrapper .about-box .skills .skill-list ul {
+  width: 100%;
+  list-style: none;
 }
 
-#about-me .wrapper .me .skills .skill-sets ul li {
-  text-transform: uppercase;
-  font-weight: lighter;
+.about .wrapper .about-box .skills .skill-list ul li {
   font-size: 1.1rem;
-  list-style-type: none;
+  letter-spacing: 1px;
+  padding: 2px;
+}
+
+.about .wrapper .about-box .skills .skill-list ul li:nth-child(1) {
+  color: #0052a0;
+  font-weight: 500;
   margin: 5px 0;
 }
 /*# sourceMappingURL=main.css.map */
