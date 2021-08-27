@@ -3,7 +3,7 @@
 main{
     height: 100%;
     width: 100vw;
-    @include pageDefaultSetting;
+    // @include pageDefaultSetting;
 
     .wrapper{
         width: 100%;
@@ -54,7 +54,7 @@ main{
                     width: 100%;
                     height: 100%;
                     display: flex;
-                    // flex-wrap: wrap;
+                    flex-wrap: wrap;
                     justify-content: space-between;
 
                     .project-card{
@@ -71,24 +71,28 @@ main{
                         margin: 20px 0;
     
                         .project_name{
-                            height: 15%;
+                            height: 20%;
                             width: 100%;
                             display: flex;
                             justify-content: space-between;
                             align-items: flex-start;
     
+                            
     
                             .name{
     
     
                                 h1{
                                     font-size: 1.5rem;
+                                    text-transform: capitalize;
                                 }
         
                                 em{
                                     font-size: 1rem;
                                 }
                             }
+
+
     
                             .projects_link{
                                 width: 20%;
@@ -111,24 +115,52 @@ main{
                         .project_image{
                             position: relative;
                             width: 100%;
-                            height: 50%;
+                            height: 40%;
                             overflow: hidden;
                             border: 4px solid rgb(63, 63, 63);
                             
-                            img{
-                                object-fit: cover;
-                                width: 100%;
-                                height: 100%;
-                                top: 0;
-                                left: 0;
+                            button{
+                                outline: none;
+                                border: none;
+                                img{
+                                    cursor: pointer;
+                                    object-fit: cover;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: 0;
+                                    left: 0;
+                                }
                             }
                         }
     
                         .project_info{
                             width: 100%;
-                            height: 30%;
+                            height: 40%;
                             display: flex;
-                            align-items: center;
+                            flex-direction: column;
+                            justify-content: center;
+                            
+                            
+                            .languages{
+                                width: 100%;
+                                padding: 10px 0;
+                                border-bottom: 1px solid lightgray;
+
+                                p{
+                                    letter-spacing: 0;
+
+                                    span{
+                                        margin-right: 5px;
+                                        font-weight: 500;
+                                    }
+                                }
+
+                            }
+
+                            p{
+                                margin-top: 5px;
+                                letter-spacing: 0.5px;
+                            }
                         }
                     }
 

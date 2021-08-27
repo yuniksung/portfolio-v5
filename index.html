@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         <ul>
             <a href="#home">
                 <li>Home</li>
@@ -174,18 +174,64 @@
                                 </div>
     
                             </div>
+
+                            <!-- Project image, when clicked, modal pops up -->
                             <div class="project_image">
-                                <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                </button>
+
+                                <!-- Modal Up -->
+                                <div class="modal" id="modal">
+                                    <div class="wrapper">
+                                        <section class="img-box">
+                                            <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                        </section>
+                                        <aside class="modal-side">
+                                            <div class="closeBtn" id="closeBtn">
+                                               <button id="closeBtn">
+                                                   X
+                                               </button>
+                                            </div>
+                                            <div class="description">
+                                                <h1>
+                                                    Name
+                                                </h1>
+                                                <h3>
+                                                    Front End
+                                                </h3>
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum natus molestiae maiores, deserunt ea, facilis culpa officiis dicta libero quod suscipit earum, repellat ex omnis recusandae nam illum? Similique, nulla.
+                                                </p>
+                                                <p class="languages">
+                                                   <ul>
+                                                       <li>HTML</li>
+                                                       <li>SASS</li>
+                                                       <li>JAVASCRIPT</li>
+                                                       <li>REST API</li>
+                                                   </ul> 
+                                                </p>
+                                            </div>
+                                        </aside>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="project_info">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel impedit numquam repudiandae a quo repellendus eos perspiciatis ad aliquam, </p>
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span> HTML, SASS, JavaScript, Youtube-API, Edamam-API
+                                    </p>
+                                    
+                                </div>
+                                <p>Meal Queue is an aide to help individuals come up with dinner ideas. </p>
                             </div>
     
                         </div>
                         <div class="project-card">
                             <div class="project_name">
                                 <div class="name">
-                                    <h1>Meal Queue</h1>
+                                    <h1>Code Quiz</h1>
                                     <em>Front End</em>
                                 </div>
                                 <div class="projects_link">
@@ -199,17 +245,25 @@
     
                             </div>
                             <div class="project_image">
-                                <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                </button>
                             </div>
                             <div class="project_info">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel impedit numquam repudiandae a quo repellendus eos perspiciatis ad aliquam, </p>
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span> HTML, CSS, JavaScript
+                                    </p>
+                                    
+                                </div>
+                                <p>The Coding Quiz Challenge contains 5 questions, on each you have 4 multiple choice options.</p>
                             </div>
     
                         </div>
                         <div class="project-card">
                             <div class="project_name">
                                 <div class="name">
-                                    <h1>Meal Queue</h1>
+                                    <h1>Work Day Scheduler</h1>
                                     <em>Front End</em>
                                 </div>
                                 <div class="projects_link">
@@ -223,10 +277,18 @@
     
                             </div>
                             <div class="project_image">
-                                <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                </button>
                             </div>
                             <div class="project_info">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel impedit numquam repudiandae a quo repellendus eos perspiciatis ad aliquam, </p>
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span> HTML, CSS, JavaScript, jQuery
+                                    </p>
+                                    
+                                </div>
+                                <p>Create a simple work-day-scheduler calendar application that allows for user to enter tasks/events for that hour in the text area and save events for each hour of the day.</p>
                             </div>
     
                         </div>    
@@ -238,8 +300,8 @@
                         <div class="project-card">
                             <div class="project_name">
                                 <div class="name">
-                                    <h1>Meal Queue</h1>
-                                    <em>Front End</em>
+                                    <h1>Music Line</h1>
+                                    <em>Back End</em>
                                 </div>
                                 <div class="projects_link">
                                     <a href="/">
@@ -252,10 +314,18 @@
     
                             </div>
                             <div class="project_image">
-                                <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                </button>
                             </div>
                             <div class="project_info">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel impedit numquam repudiandae a quo repellendus eos perspiciatis ad aliquam, </p>
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span>Node.js, Express.js Sequelize, Handlebars
+                                    </p>
+                                    
+                                </div>
+                                <p>E-Commerce site allowing for purchase and rental of music products</p>
                             </div>
     
                         </div>
@@ -276,9 +346,17 @@
     
                             </div>
                             <div class="project_image">
-                                <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                </button>
                             </div>
                             <div class="project_info">
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span> HTML, SASS, JavaScript, Youtube-API, Edamam-API
+                                    </p>
+                                    
+                                </div>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel impedit numquam repudiandae a quo repellendus eos perspiciatis ad aliquam, </p>
                             </div>
     
@@ -286,11 +364,11 @@
                         <div class="project-card">
                             <div class="project_name">
                                 <div class="name">
-                                    <h1>Meal Queue</h1>
-                                    <em>Front End</em>
+                                    <h1>butget Tracker</h1>
+                                    <em>Back End</em>
                                 </div>
                                 <div class="projects_link">
-                                    <a href="/">
+                                    <a href="https://mighty-spire-18288.herokuapp.com/">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                     <a href="/">
@@ -300,10 +378,50 @@
     
                             </div>
                             <div class="project_image">
-                                <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                </button>
                             </div>
                             <div class="project_info">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel impedit numquam repudiandae a quo repellendus eos perspiciatis ad aliquam, </p>
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span> HTML, SASS, JavaScript, Youtube-API, Edamam-API
+                                    </p>
+                                </div>
+                                <p>This application allows the user to track their withdrawals and deposits on a computer or mobile device with or without an internet connection.</p>
+                            </div>
+    
+                        </div>    
+                        <div class="project-card">
+                            <div class="project_name">
+                                <div class="name">
+                                    <h1>NOTE TAKR</h1>
+                                    <em>Back End</em>
+                                </div>
+                                <div class="projects_link">
+                                    <a href="https://yuniknotetakr.herokuapp.com/">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="/">
+                                        <i class="fab fa-github-square"></i>
+                                    </a>
+                                </div>
+    
+                            </div>
+                            <div class="project_image">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                </button>
+                            </div>
+                            <div class="project_info">
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span> HTML, SASS, JavaScript, Youtube-API, Edamam-API
+                                    </p>
+                                    
+                                </div>
+                                <p>Tthe goal was to build an application that allows the user to create, save, and delete notes which runs on a server.
+                                </p>
                             </div>
     
                         </div>    
@@ -320,7 +438,9 @@
 
     <!-- footer with all my contact information -->
     <footer id="contact">
+        <div class="wrapper">
 
+        </div>
     </footer>
 
     <script src="./assets/javascript/index.js"></script>

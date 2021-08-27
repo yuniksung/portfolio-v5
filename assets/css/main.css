@@ -6,10 +6,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../images/hero1.jpg");
-  background-position: center;
-  background-size: cover;
-  box-shadow: 2px 8px 10px #358acf15;
+  background-color: #223750;
+  box-shadow: 2px 8px 10px #001a446c;
 }
 
 header .hero-wrapper {
@@ -138,11 +136,13 @@ body {
 
 .navbar {
   z-index: 999;
-  width: 100%;
-  height: 5vh;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: fixed;
-  background-color: #fff;
+  top: -50px;
+  height: 5vh;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  background-color: #00152f;
 }
 
 .navbar ul {
@@ -158,7 +158,7 @@ body {
   align-items: center;
   height: 100%;
   text-decoration: none;
-  color: gray;
+  color: white;
   font-weight: 600;
   text-transform: uppercase;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -174,14 +174,14 @@ body {
 }
 
 .navbar ul a .resume-nav {
-  color: #3659b8;
+  color: #a0b836;
 }
 
 .about {
   width: 100%;
   height: 80vh;
   display: flex;
-  box-shadow: 2px 8px 10px #358acf15;
+  box-shadow: 2px 8px 10px #001a446c;
   background-color: #fdfdf6;
 }
 
@@ -301,7 +301,6 @@ body {
 main {
   height: 100%;
   width: 100vw;
-  box-shadow: 2px 8px 10px #358acf15;
 }
 
 main .wrapper {
@@ -359,6 +358,7 @@ main .wrapper .show-works .project-box .workBox {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -382,7 +382,7 @@ main .wrapper .show-works .project-box .workBox .project-card:hover {
 }
 
 main .wrapper .show-works .project-box .workBox .project-card .project_name {
-  height: 15%;
+  height: 20%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -391,6 +391,7 @@ main .wrapper .show-works .project-box .workBox .project-card .project_name {
 
 main .wrapper .show-works .project-box .workBox .project-card .project_name .name h1 {
   font-size: 1.5rem;
+  text-transform: capitalize;
 }
 
 main .wrapper .show-works .project-box .workBox .project-card .project_name .name em {
@@ -415,12 +416,18 @@ main .wrapper .show-works .project-box .workBox .project-card .project_name .pro
 main .wrapper .show-works .project-box .workBox .project-card .project_image {
   position: relative;
   width: 100%;
-  height: 50%;
+  height: 40%;
   overflow: hidden;
   border: 4px solid #3f3f3f;
 }
 
-main .wrapper .show-works .project-box .workBox .project-card .project_image img {
+main .wrapper .show-works .project-box .workBox .project-card .project_image button {
+  outline: none;
+  border: none;
+}
+
+main .wrapper .show-works .project-box .workBox .project-card .project_image button img {
+  cursor: pointer;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -430,8 +437,110 @@ main .wrapper .show-works .project-box .workBox .project-card .project_image img
 
 main .wrapper .show-works .project-box .workBox .project-card .project_info {
   width: 100%;
-  height: 30%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main .wrapper .show-works .project-box .workBox .project-card .project_info .languages {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+main .wrapper .show-works .project-box .workBox .project-card .project_info .languages p {
+  letter-spacing: 0;
+}
+
+main .wrapper .show-works .project-box .workBox .project-card .project_info .languages p span {
+  margin-right: 5px;
+  font-weight: 500;
+}
+
+main .wrapper .show-works .project-box .workBox .project-card .project_info p {
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+
+footer {
+  width: 100%;
+  height: 40vh;
+  background-color: #00152f;
+  margin-top: 60px;
+  border-top: 6px solid #9c9c00;
+}
+
+.modal {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.322);
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.modal .wrapper {
+  width: 800px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  flex-direction: row;
+  cursor: auto;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.modal .wrapper section {
+  width: 75%;
+  height: 100%;
+  margin-right: auto;
+  overflow: scroll;
+}
+
+.modal .wrapper section img {
+  width: 100%;
+}
+
+.modal .wrapper aside {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal .wrapper aside #closeBtn {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.modal .wrapper aside #closeBtn button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 2em;
+  width: 25px;
+  height: 25px;
+}
+
+.modal .wrapper aside .description {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
 }
 /*# sourceMappingURL=main.css.map */

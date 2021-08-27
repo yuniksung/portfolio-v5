@@ -5,10 +5,10 @@ header{
     width: 100%;
     // background-color: #68A4D5;
     @include flexCent;
-    background: url("../images/hero1.jpg");
-    background-position: center;
-    background-size:cover;
-
+    // background: url("../images/hero1.jpg");
+    // background-position: center;
+    // background-size:cover;
+    background-color: rgb(34, 55, 80);
     @include pageDefaultSetting;
 
     // Not toggled
