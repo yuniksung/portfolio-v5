@@ -32,27 +32,29 @@
 
     <!-- Hero -->
     <header id="home">
-        <div id="showMe" class="hero-wrapper">
-            <div class="unshow-box">
-                <div class="inactive">
-                    <div class="my-pic">
-                        <img src="./assets/images/me1.jpg" alt="myPic">
+        <div class="my-box">
+            <div id="showMe" class="hero-wrapper">
+                <div class="unshow-box">
+                    <div class="inactive">
+                        <div class="my-pic">
+                            <img src="./assets/images/me1.jpg" alt="myPic">
+                        </div>
+                        <div class="hero-textBox">
+                            <h2>Yunik Sung</h2>
+                            <h3>
+                                Full Stack Web Developer
+                            </h3>
+                        </div>   
+             
                     </div>
-                    <div class="hero-textBox">
-                        <h2>Yunik Sung</h2>
-                        <h3>
-                            Full Stack Web Developer
-                        </h3>
-                    </div>   
-         
+                    <div class="down-icon">
+                        <i class="fas fa-caret-down"></i>
+                    </div> 
                 </div>
-                <div class="down-icon">
-                    <i class="fas fa-caret-down"></i>
-                </div> 
-            </div>
-            <div class="show-box">
-                <div class="hero-text">
-                    <p><span>Full Stack Web Developer</span> leveraging a background in project management. Recognized for <span>leadership</span>. Recently received a Certificate in <span>Web Development</span> from the University of Austin. Excellent <span>interpersonal communication skills</span> and<span> collaborator</span> who works well on team-based projects as well as independently. Recognized for <span>proven complex problem-solving abilities</span> to contribute effectively as a part of a fast-paced, quality-driven team.</p>
+                <div class="show-box">
+                    <div class="hero-text">
+                        <p><span>Full Stack Web Developer</span> leveraging a background in project management. Recognized for <span>leadership</span>. Recently received a Certificate in <span>Web Development</span> from the University of Austin. Excellent <span>interpersonal communication skills</span> and<span> collaborator</span> who works well on team-based projects as well as independently. Recognized for <span>proven complex problem-solving abilities</span> to contribute effectively as a part of a fast-paced, quality-driven team.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,6 +135,80 @@
         </section>
     </article>
 
+    <div class="my-links">
+        <div class="wrapper">
+
+            <div class="personal-info">
+                <h3>Thank you for Visiting</h3>
+                <p>I am currently looking for a new opportunity. If you have any concern, please do not hesitate to contact me</p>
+
+                <div class="clipboard">
+                    <p id="myEmail">yuniksung@gmail.com</p>
+                    <button onclick="copyToClipboard('myEmail')">
+                        <p>Copy Email</p>
+                        <i class="far fa-clone"></i>
+                    </button>
+                </div>              
+            </div>
+
+            <div class="contact-icons">
+                <div class="email link">
+                    <a href="/">
+                        <div class="link-p">
+                            <p>
+                                Email
+                            </p>
+                        </div>
+                        <div class="i">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="github link">
+                    <a href="/">
+                        <div class="link-p">
+                            <p>Github</p>
+                        </div>
+                        <div class="i">
+                            <i class="fab fa-github"></i>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="linkedIn link">
+                    <a href="/">
+                        <div class="link-p"><p>
+                            LinkedIn
+                        </p></div>
+                        <div class="i">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        
+                    </a>
+                </div>
+    
+                <div class="resume link">
+                    <a href="/">
+                        <div class="link-p">
+                            <p>
+                                Resume
+                            </p>
+                        </div>
+                        <div class="i">
+                            <i class="far fa-file-alt"></i>
+                        </div>
+                        
+                    </a>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+
+
     <!-- list of my works -->
     <main id="my-works">
         <div class="wrapper">
@@ -190,7 +266,7 @@
                                         <aside class="modal-side">
                                             <div class="closeBtn" id="closeBtn">
                                                <button id="closeBtn">
-                                                   X
+                                                <i class="fas fa-times"></i>
                                                </button>
                                             </div>
                                             <div class="description">
@@ -246,7 +322,7 @@
                             </div>
                             <div class="project_image">
                                 <button id="modalBtn">
-                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                    <img src="./assets/images/codeQuiz.gif" alt="meal-Q">
                                 </button>
                             </div>
                             <div class="project_info">
@@ -278,7 +354,7 @@
                             </div>
                             <div class="project_image">
                                 <button id="modalBtn">
-                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                    <img src="./assets/images/wds.jpg" alt="meal-Q">
                                 </button>
                             </div>
                             <div class="project_info">
@@ -315,13 +391,13 @@
                             </div>
                             <div class="project_image">
                                 <button id="modalBtn">
-                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                    <img src="./assets/images/ml.jpg" alt="meal-Q">
                                 </button>
                             </div>
                             <div class="project_info">
                                 <div class="languages">
                                     <p>
-                                        <span>Languages:</span>Node.js, Express.js Sequelize, Handlebars
+                                        <span>Languages:</span>Node.js, Express.js, Sequelize, Handlebars
                                     </p>
                                     
                                 </div>
@@ -329,42 +405,11 @@
                             </div>
     
                         </div>
+                        
                         <div class="project-card">
                             <div class="project_name">
                                 <div class="name">
-                                    <h1>Meal Queue</h1>
-                                    <em>Front End</em>
-                                </div>
-                                <div class="projects_link">
-                                    <a href="/">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                    <a href="/">
-                                        <i class="fab fa-github-square"></i>
-                                    </a>
-                                </div>
-    
-                            </div>
-                            <div class="project_image">
-                                <button id="modalBtn">
-                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
-                                </button>
-                            </div>
-                            <div class="project_info">
-                                <div class="languages">
-                                    <p>
-                                        <span>Languages:</span> HTML, SASS, JavaScript, Youtube-API, Edamam-API
-                                    </p>
-                                    
-                                </div>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel impedit numquam repudiandae a quo repellendus eos perspiciatis ad aliquam, </p>
-                            </div>
-    
-                        </div>
-                        <div class="project-card">
-                            <div class="project_name">
-                                <div class="name">
-                                    <h1>butget Tracker</h1>
+                                    <h1>budget Tracker</h1>
                                     <em>Back End</em>
                                 </div>
                                 <div class="projects_link">
@@ -379,13 +424,13 @@
                             </div>
                             <div class="project_image">
                                 <button id="modalBtn">
-                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                    <img src="./assets/images/bt.png" alt="meal-Q">
                                 </button>
                             </div>
                             <div class="project_info">
                                 <div class="languages">
                                     <p>
-                                        <span>Languages:</span> HTML, SASS, JavaScript, Youtube-API, Edamam-API
+                                        <span>Languages:</span> Mongoose, Node.js, Express.js
                                     </p>
                                 </div>
                                 <p>This application allows the user to track their withdrawals and deposits on a computer or mobile device with or without an internet connection.</p>
@@ -410,17 +455,17 @@
                             </div>
                             <div class="project_image">
                                 <button id="modalBtn">
-                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                    <img src="./assets/images/nt.jpg" alt="meal-Q">
                                 </button>
                             </div>
                             <div class="project_info">
                                 <div class="languages">
                                     <p>
-                                        <span>Languages:</span> HTML, SASS, JavaScript, Youtube-API, Edamam-API
+                                        <span>Languages:</span> Node.js, Express.js, JQuery, AJAX, Heroku
                                     </p>
                                     
                                 </div>
-                                <p>Tthe goal was to build an application that allows the user to create, save, and delete notes which runs on a server.
+                                <p>The goal was to build an application that allows the user to create, save, and delete notes which runs on a server.
                                 </p>
                             </div>
     

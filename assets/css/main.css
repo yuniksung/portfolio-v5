@@ -1,20 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 header {
-  height: 70vh;
+  height: 50vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #91C7B1;
+}
+
+header .my-box {
+  height: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #223750;
-  box-shadow: 2px 8px 10px #001a446c;
 }
 
-header .hero-wrapper {
+header .my-box .hero-wrapper {
   overflow: hidden;
   width: 30vw;
   height: 15vh;
-  background-color: #fff;
+  background-color: #F1F7ED;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transition: height 0.5s ease-in-out;
   cursor: pointer;
@@ -25,27 +32,28 @@ header .hero-wrapper {
   padding: 10px;
 }
 
-header .hero-wrapper .unshow-box {
+header .my-box .hero-wrapper .unshow-box {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-header .hero-wrapper .unshow-box .inactive {
+header .my-box .hero-wrapper .unshow-box .inactive {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-header .hero-wrapper .unshow-box .inactive .my-pic {
+header .my-box .hero-wrapper .unshow-box .inactive .my-pic {
   position: relative;
   width: 120px;
   height: 120px;
   border-radius: 50%;
   overflow: hidden;
+  border: 3px solid #54494B;
 }
 
-header .hero-wrapper .unshow-box .inactive .my-pic img {
+header .my-box .hero-wrapper .unshow-box .inactive .my-pic img {
   position: absolute;
   object-fit: cover;
   top: 0;
@@ -54,24 +62,26 @@ header .hero-wrapper .unshow-box .inactive .my-pic img {
   height: 100%;
 }
 
-header .hero-wrapper .unshow-box .inactive .hero-textBox {
+header .my-box .hero-wrapper .unshow-box .inactive .hero-textBox {
   margin-left: 40px;
   padding-left: 20px;
   border-left: 1px solid lightgray;
 }
 
-header .hero-wrapper .unshow-box .inactive .hero-textBox h2 {
+header .my-box .hero-wrapper .unshow-box .inactive .hero-textBox h2 {
   font-size: 2rem;
   letter-spacing: 1.1px;
+  color: #54494B;
 }
 
-header .hero-wrapper .unshow-box .inactive .hero-textBox h3 {
+header .my-box .hero-wrapper .unshow-box .inactive .hero-textBox h3 {
   font-size: 1rem;
   padding: 10px 0;
   letter-spacing: 1.1px;
+  color: #54494B;
 }
 
-header .hero-wrapper .unshow-box .down-icon {
+header .my-box .hero-wrapper .unshow-box .down-icon {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -80,11 +90,12 @@ header .hero-wrapper .unshow-box .down-icon {
   transition: transform 0.35s;
 }
 
-header .hero-wrapper .unshow-box .down-icon i {
+header .my-box .hero-wrapper .unshow-box .down-icon i {
+  color: #B33951;
   font-size: 2.5rem;
 }
 
-header .hero-wrapper .show-box {
+header .my-box .hero-wrapper .show-box {
   height: 100%;
   margin-top: 20px;
   display: flex;
@@ -94,44 +105,33 @@ header .hero-wrapper .show-box {
   padding: 20px;
 }
 
-header .hero-wrapper .show-box p {
+header .my-box .hero-wrapper .show-box p {
   font-size: 1.2rem;
   line-height: 120%;
   margin-top: 1rem;
   letter-spacing: 1px;
+  color: #54494B;
 }
 
-header .hero-wrapper .show-box p span {
-  color: #cf6161;
+header .my-box .hero-wrapper .show-box p span {
+  color: #B33951;
   font-weight: 500;
 }
 
-header .active {
+header .my-box .active {
   height: 45vh;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-header .active .down-icon {
+header .my-box .active .down-icon {
   transition: transform 0.35s;
 }
 
-header .active .down-icon i {
+header .my-box .active .down-icon i {
+  color: #B33951;
   transform: rotate(180deg);
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  overflow-x: hidden;
-  background-color: #fff;
 }
 
 .navbar {
@@ -142,7 +142,8 @@ body {
   width: 100%;
   display: block;
   transition: top 0.3s;
-  background-color: #00152f;
+  background-color: #F1F7ED;
+  background-color: #54494B;
 }
 
 .navbar ul {
@@ -174,15 +175,16 @@ body {
 }
 
 .navbar ul a .resume-nav {
-  color: #a0b836;
+  color: #E3D081;
 }
 
 .about {
-  width: 100%;
-  height: 80vh;
+  clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%);
+  font-weight: 300;
+  width: 100vw;
+  height: 90vh;
   display: flex;
-  box-shadow: 2px 8px 10px #001a446c;
-  background-color: #fdfdf6;
+  background-color: #F1F7ED;
 }
 
 .about .wrapper {
@@ -200,7 +202,6 @@ body {
 }
 
 .about .wrapper .header h1 {
-  font-weight: 300;
   font-size: 3rem;
   letter-spacing: 3px;
 }
@@ -220,13 +221,18 @@ body {
   height: 100%;
   border-radius: 15px;
   padding: 2.5rem;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: -18px 1px 38px -25px black;
+  -webkit-box-shadow: -18px 1px 38px -25px black;
+  -moz-box-shadow: -18px 1px 38px -25px black;
+  background-color: #fafdfc;
   transition: all 1.35s cubic-bezier(0.25, 0.8, 0.25, 1);
   background-color: #fff;
 }
 
 .about .wrapper .about-box .mybox:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: -11px 1px 45px -30px black;
+  -webkit-box-shadow: -11px 1px 45px -30px black;
+  -moz-box-shadow: -11px 1px 45px -30px black;
 }
 
 .about .wrapper .about-box .mybox h3 {
@@ -263,6 +269,7 @@ body {
 }
 
 .about .wrapper .about-box .talents .cards .card .card-text h4 {
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -294,13 +301,14 @@ body {
 
 .about .wrapper .about-box .skills .skill-list ul li:nth-child(1) {
   color: #0052a0;
-  font-weight: 500;
+  font-weight: 400;
   margin: 5px 0;
 }
 
 main {
   height: 100%;
   width: 100vw;
+  background-color: #F1F7ED;
 }
 
 main .wrapper {
@@ -322,7 +330,6 @@ main .wrapper .header {
 }
 
 main .wrapper .header h1 {
-  font-weight: 300;
   font-size: 3rem;
   letter-spacing: 3px;
 }
@@ -365,7 +372,10 @@ main .wrapper .show-works .project-box .workBox {
 main .wrapper .show-works .project-box .workBox .project-card {
   width: 350px;
   height: 450px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: -18px 1px 38px -25px black;
+  -webkit-box-shadow: -18px 1px 38px -25px black;
+  -moz-box-shadow: -18px 1px 38px -25px black;
+  background-color: #fafdfc;
   transition: all 1.35s cubic-bezier(0.25, 0.8, 0.25, 1);
   padding: 20px;
   border-radius: 5px;
@@ -378,7 +388,9 @@ main .wrapper .show-works .project-box .workBox .project-card {
 }
 
 main .wrapper .show-works .project-box .workBox .project-card:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: -11px 1px 45px -30px black;
+  -webkit-box-shadow: -11px 1px 45px -30px black;
+  -moz-box-shadow: -11px 1px 45px -30px black;
 }
 
 main .wrapper .show-works .project-box .workBox .project-card .project_name {
@@ -418,7 +430,7 @@ main .wrapper .show-works .project-box .workBox .project-card .project_image {
   width: 100%;
   height: 40%;
   overflow: hidden;
-  border: 4px solid #3f3f3f;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.137);
 }
 
 main .wrapper .show-works .project-box .workBox .project-card .project_image button {
@@ -428,7 +440,7 @@ main .wrapper .show-works .project-box .workBox .project-card .project_image but
 
 main .wrapper .show-works .project-box .workBox .project-card .project_image button img {
   cursor: pointer;
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   height: 100%;
   top: 0;
@@ -478,7 +490,7 @@ footer {
   bottom: 0;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.322);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 1rem;
@@ -487,6 +499,7 @@ footer {
 }
 
 .modal .wrapper {
+  z-index: 999;
   width: 800px;
   height: 600px;
   display: flex;
@@ -542,5 +555,129 @@ footer {
   align-items: flex-start;
   flex-direction: column;
   padding: 20px;
+}
+
+.my-links {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-links .wrapper {
+  width: 70%;
+  height: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-links .wrapper .personal-info {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.my-links .wrapper .personal-info h3 {
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+.my-links .wrapper .personal-info p {
+  letter-spacing: 1.1px;
+  line-height: 130%;
+  font-weight: 300;
+}
+
+.my-links .wrapper .personal-info .clipboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.my-links .wrapper .personal-info .clipboard button {
+  margin-right: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 140px;
+  padding: 5px 10px;
+}
+
+.my-links .wrapper .personal-info .clipboard #copied {
+  display: none;
+}
+
+.my-links .wrapper .contact-icons {
+  width: 70%;
+  height: 70%;
+  margin-left: auto;
+  padding-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 1px solid #F1F7ED;
+}
+
+.my-links .wrapper .contact-icons .link {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-links .wrapper .contact-icons .link a {
+  min-width: 50%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #F1F7ED;
+  font-weight: 300;
+}
+
+.my-links .wrapper .contact-icons .link a .link-p, .my-links .wrapper .contact-icons .link a .i {
+  padding: 5 px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-links .wrapper .contact-icons .link a .link-p {
+  width: 120px;
+  background-color: #578875;
+}
+
+.my-links .wrapper .contact-icons .link a .i {
+  background-color: #34745b;
+  width: 30%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  background-color: #91C7B1;
+  font-weight: 400;
+}
+
+body h1 {
+  color: #54494B;
+  font-weight: 200;
 }
 /*# sourceMappingURL=main.css.map */

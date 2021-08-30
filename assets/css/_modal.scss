@@ -7,7 +7,7 @@
     bottom: 0;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.322);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 1rem;
@@ -16,6 +16,7 @@
     
 
     .wrapper{
+        z-index: 999;
         width: 800px;
         height: 600px;
         @include flexCent;

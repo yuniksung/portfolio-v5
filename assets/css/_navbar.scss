@@ -8,8 +8,8 @@
     width: 100%;
     display: block;
     transition: top 0.3s;
-    background-color: rgb(0, 21, 47);
-
+    background-color: $bg1;
+    background-color: $black;
 
     ul{
         @include flexCent;
@@ -34,7 +34,7 @@
             }
 
             .resume-nav{
-                color: rgb(160, 184, 54);
+                color: $yellow;
             }
         }
     }

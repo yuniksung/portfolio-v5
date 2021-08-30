@@ -1,8 +1,8 @@
 let showMeBtn = document.getElementById("showMe");
-const openEls = document.querySelectorAll("[data-open]");
-const isVisible = "is-visible";
-
-
+let modalBtn = document.getElementById("modalBtn");
+let modalContainer = document.getElementById("modal");
+let closeBtn = document.getElementById("closeBtn");
+let copyBtn = document.getElementById("emailCopy");
 // Navigation display when scroll down
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -14,9 +14,24 @@ function scrollFunction() {
 
 // Header, show my profile when clicked
 function boxToggle(){
-    const heroWrapper = document.querySelector(".hero-wrapper");
-    heroWrapper.classList.toggle('active');
+  const heroWrapper = document.querySelector(".hero-wrapper");
+  heroWrapper.classList.toggle('active');
+  console.log("toggle");
 }
+
+// Copyboard
+function copyToClipboard(elementId) {
+  let aux = document.createElement("input");
+  aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+  document.body.appendChild(aux);
+  aux.select();
+  document.execCommand("copy");
+  document.body.removeChild(aux);
+
+  let copied = document.getElementById("copied");
+  copied.style.display = "block";
+}
+
 
 // Show projects when selected
 function displayProjects(select){
@@ -39,14 +54,22 @@ function displayProjects(select){
        }
 }
 
+// Pop up Modal
+modalBtn.addEventListener("click", function(){
+  modalContainer.style.display = "flex";
+});
 
+// Close Modal
+closeBtn.addEventListener("click", function(){
+  modalContainer.style.display = "none";
+});
+
+modalContainer.addEventListener("click", function(){
+  modalContainer.style.display = "none";
+});
  
-for(const el of openEls) {
-  el.addEventListener("click", function() {
-    const modalId = this.dataset.open;
-    document.getElementById(modalId).classList.add(isVisible);
-  });
-}
+
 
 showMeBtn.addEventListener("click", boxToggle);
 window.onscroll = function() {scrollFunction()};
+
