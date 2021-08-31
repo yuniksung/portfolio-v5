@@ -1,20 +1,25 @@
 @import './mixin';
 
 .navbar{
-    margin: 2rem;
+    z-index: 999;
+    position: fixed;
+    top: -50px;
+    height: 5vh;
     width: 100%;
+    display: block;
+    transition: top 0.3s;
+    background-color: $bg1;
+    background-color: $black;
 
     ul{
         @include flexCent;
         height: 100%;
 
         a{
-            margin: 2rem;
-            border: 1px dashed rgba(0, 0, 0, 0.315);
             @include flexCent;
             height: 100%;
             text-decoration: none;
-            color:  gray;
+            color:  rgb(255, 255, 255);
             font-weight: 600;
             text-transform: uppercase;
             transition: $boxHoverEffect;
@@ -24,8 +29,12 @@
             }
 
             li{
-                padding: 0 120px;
+                padding: 0 70px;
                 list-style: none;
+            }
+
+            .resume-nav{
+                color: $yellow;
             }
         }
     }

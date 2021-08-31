@@ -21,123 +21,195 @@
     </div>
 
     <!-- Navigation -->
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         <ul>
-            <a href="/">
+            <a href="#home">
                 <li>Home</li>
             </a>
-            <a href="#about-me">
-                <li>About</li>
+            <a href="#about">
+                <li>Skills</li>
             </a>
             <a href="#my-works">
                 <li>Projects</li>
             </a>
-            <a href="#contact">
-                <li>Contacts</li>
+            <a href="./assets/images/Yunik_Sung_Resume.pdf" target="_blank">
+                <li class="resume-nav">Resume</li>
             </a>
         </ul>
     </div>
 
-<<<<<<< HEAD
     <!-- Hero -->
-    <div class="hero" id="home">
-        <div class="hero-shape">
-            <div class="bg">
-                <div class="hero-text">
-                    <h1>Yunik Sung</h1>
-                    <p>Full Stack Web Developer</p>
-                    <p>Motivated, Easily Adaptable, Team Motivation, Problem Solveing, Leadership, Teamwork, Project Management Skill . . . and even more</p>
+    <header id="home">
+        <div class="my-box">
+            <div id="showMe" class="hero-wrapper">
+                <div class="unshow-box">
+                    <div class="inactive">
+                        <div class="my-pic">
+                            <img src="./assets/images/me1.jpg" alt="myPic">
+                        </div>
+                        <div class="hero-textBox">
+                            <h2>Yunik Sung</h2>
+                            <h3>
+                                Full Stack Web Developer
+                            </h3>
+                        </div>   
+             
+                    </div>
+                    <div class="down-icon">
+                        <i class="fas fa-caret-down"></i>
+                    </div> 
+                </div>
+                <div class="show-box">
+                    <div class="hero-text">
+                        <p><span>Full Stack Web Developer</span> leveraging a background in project management. Recognized for <span>leadership</span>. Recently received a Certificate in <span>Web Development</span> from the University of Austin. Excellent <span>interpersonal communication skills</span> and<span> collaborator</span> who works well on team-based projects as well as independently. Recognized for <span>proven complex problem-solving abilities</span> to contribute effectively as a part of a fast-paced, quality-driven team.</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-    </div>
-
+    </header>
+    
     <!-- About me section -->
-    <section id="about-me">
-        <div class="wrapper">
-            <div class="cards">
-                <div class="card">
-                    <div class="icon">
-                        <i class="fas fa-fighter-jet"></i>
-                    </div>
-                    <div class="texts">
-                        <h4>Fast Learner</h4>
-                        <p>Display an ability to learn rapidly and adapt quickly to changing situations
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <div class="texts">
-                        <h4>Project Management</h4>
-                        <p>Effectively blend management skills with technical expertise
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="icon">
-                        <i class="fas fa-exclamation-circle"></i>
-
-                    </div>
-                    <div class="texts">
-                        <h4>Problem Solver</h4>
-                        <p>Excels in creative thinking and problem solving</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="icon">
-                        <i class="fas fa-tasks"></i>
-
-                    </div>
-                    <div class="texts">
-                        <h4>Motivation</h4>
-                        <p>Strive for maximum drive in fulfilling job responsibilities
-                        </p>
-                    </div>
-                </div>
+    <article id="about" class="about">
+        <section class="wrapper">
+            <div class="header">
+                <h1>
+                    Skills
+                </h1>
             </div>
-
-            <div class="me">
-                <div class="tellMe">
-                    <h1>
-                        YunIk Sung <span>- Full Stack Web Developer</span>
-                    </h1>
-                    <p>
-                        <p>Full Stack Web Developer leveraging a background in project management. Recognized for <span>leadership</span>. Recently received a Certificate in <span>Web Development</span> from the University of Austin. Excellent <span>interpersonal communication skills</span> and<span> collaborator</span> who works well on team-based projects as well as independently. Recognized for <span>proven complex problem-solving abilities</span> to contribute effectively as a part of a fast-paced, quality-driven team.</p>
-                    </p>
-                    <div class="btns">
-                        <a href="mailto:yuniksung@gmail.com" rel="noreferrer">Contact</a>
-                        <a target="_blank" rel="noreferrer" href="/portfolio-v4/Yunik_Resume.pdf">Resume</a>
+            <article class="about-box">
+                <section class="talents mybox">
+                    <h3>Talents</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <i class="fas fa-fighter-jet"></i>
+                            <div class="card-text">
+                                <h4>Fast Learner</h4>
+                                <p>Display an ability to learn rapidly and adapt quickly to changing situations
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-user-shield"></i>
+                            <div class="card-text">
+                                <h4>Project Management</h4>
+                                <p>Effectively blend management skills with technical expertise
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <div class="card-text">
+                                <h4>Problem Solver</h4>
+                                <p>Excels in creative thinking and problem solving</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-tasks"></i>
+                            <div class="card-text">
+                                <h4>Motivation</h4>
+                                <p>Strive for maximum drive in fulfilling job responsibilities
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="skills">
-                    <h2>Very Confident : </h2>
-                    <div class="skill-sets">
-                        <ul>    Front End
+                </section>
+                <section class="skills mybox">
+                    <h3>Skills</h3>
+                    <div class="skill-list">
+                        <ul>
+                            <li>FRONT ENDS</li>
                             <li>HTML</li>
                             <li>CSS</li>
+                            <li>SASS/LESS</li>
                             <li>JAVASCRIPT</li>
-                            <li>REACT</li>
-                            <li>SASS/ LESS</li>
-                            <li>Styled-Components</li>
+                            <li>REACT.JS</li>
                         </ul>
-                        <ul>    Back End
+                        <ul>
+                            <li>BACK ENDS</li>
                             <li>NODE.JS</li>
+                            <li>EXPRESS.JS</li>
                             <li>MYSQL</li>
                         </ul>
-                        <ul>    Other
-                            <li>Heroku</li>
-                            <li>Git</li>
-                            <li>Adobe Photoshop</li>
-                            <li>Adobe AfterEffects</li>
+                        <ul>
+                            <li>OTHERS</li>
+                            <li>HEROKU</li>
+                            <li>GIT</li>
+                            <li>ADOBE SUITES</li>
+                            <li>MICROSOFT SUITES</li>
                         </ul>
                     </div>
+                </section>
+            </article>
+        </section>
+    </article>
+
+    <div class="my-links">
+        <div class="wrapper">
+
+            <div class="personal-info">
+                <h3>Thank you for Visiting</h3>
+                <p>I am currently looking for a new opportunity. If you have any concern, please do not hesitate to contact me</p>
+
+                <div class="clipboard">
+                    <p id="myEmail">yuniksung@gmail.com</p>
+                    <button onclick="copyToClipboard('myEmail')">
+                        <p>Copy Email</p>
+                        <i class="far fa-clone"></i>
+                    </button>
+                </div>              
+            </div>
+
+            <div class="contact-icons">
+                <div class="email link">
+                    <a href="mailto:yuniksung@gmail.com" rel="noreferrer">
+                        <div class="link-p">
+                            <p>
+                                Email
+                            </p>
+                        </div>
+                        <div class="i">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="github link">
+                    <a href="https://github.com/yuniksung" target="_blank">
+                        <div class="link-p">
+                            <p>Github</p>
+                        </div>
+                        <div class="i">
+                            <i class="fab fa-github"></i>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="linkedIn link">
+                    <a href="https://www.linkedin.com/in/yun-ik-sung-0a02a326/" target="_blank">
+                        <div class="link-p"><p>
+                            LinkedIn
+                        </p></div>
+                        <div class="i">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        
+                    </a>
+                </div>
+    
+                <div class="resume link">
+                    <a href="./assets/images/Yunik_Sung_Resume.pdf" target="_blank">
+                        <div class="link-p">
+                            <p>
+                                Resume
+                            </p>
+                        </div>
+                        <div class="i">
+                            <i class="far fa-file-alt"></i>
+                        </div>
+                        
+                    </a>
                 </div>
             </div>
-=======
     <!-- About me section -->
     <section id="about-me">
         <div class="me-description">
@@ -182,20 +254,291 @@
                     <li>PRO TOOLS</li>
                     <li>FINAL CUT PRO X</li>
                 </ul>
-            </div>
-            
->>>>>>> a691d445de9afcc9bd979d1b4c9bddcd002ab842
+            </div>            
         </div>
-    </section>
+    </div>
+
+
 
     <!-- list of my works -->
     <main id="my-works">
+        <div class="wrapper">
+            <div class="header">
+                <h1>
+                    Projects
+                </h1>
+            </div>
+            <div class="switches">
+                <form name="switchProjects">
+                    <select name="projects" onChange="displayProjects(this)">
+                        <option value="showAll">Show All</option>
+                        <option value="frontEnd">Front End Projects</option>
+                        <option value="backEnd">Back End Projects</option>
+                    </select>
+                </form>
 
+            </div>
+            <div class="show-works" id="showWorks">
+                 <!-- Front End Projects -->
+                <div class="project-box">
+
+                    <!-- Frontend -->
+                    <div id="frontEnds" class="workBox">
+                        <div class="project-card">
+                            <div class="project_name">
+                                <div class="name">
+                                    <h1>Meal Queue</h1>
+                                    <em>Front End</em>
+                                </div>
+                                <div class="projects_link">
+                                    <a href="https://axeliono.github.io/Meal-Queue/" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/axeliono/Meal-Queue" target="_blank">
+                                        <i class="fab fa-github-square"></i>
+                                    </a>
+                                </div>
+    
+                            </div>
+
+                            <!-- Project image, when clicked, modal pops up -->
+                            <div class="project_image">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                </button>
+
+                                <!-- Modal Up -->
+                                <!-- <div class="modal" id="modal">
+                                    <div class="wrapper">
+                                        <section class="img-box">
+                                            <img src="./assets/images/mealq.jpg" alt="meal-Q">
+                                        </section>
+                                        <aside class="modal-side">
+                                            <div class="closeBtn" id="closeBtn">
+                                               <button id="closeBtn">
+                                                <i class="fas fa-times"></i>
+                                               </button>
+                                            </div>
+                                            <div class="description">
+                                                <h1>
+                                                    Name
+                                                </h1>
+                                                <h3>
+                                                    Front End
+                                                </h3>
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum natus molestiae maiores, deserunt ea, facilis culpa officiis dicta libero quod suscipit earum, repellat ex omnis recusandae nam illum? Similique, nulla.
+                                                </p>
+                                                <p class="languages">
+                                                   <ul>
+                                                       <li>HTML</li>
+                                                       <li>SASS</li>
+                                                       <li>JAVASCRIPT</li>
+                                                       <li>REST API</li>
+                                                   </ul> 
+                                                </p>
+                                            </div>
+                                        </aside>
+                                    </div>
+                                </div> -->
+
+                            </div>
+                            <div class="project_info">
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span> HTML, SASS, JavaScript, Youtube-API, Edamam-API
+                                    </p>
+                                    
+                                </div>
+                                <p>Meal Queue is an aide to help individuals come up with dinner ideas. </p>
+                            </div>
+    
+                        </div>
+                        <div class="project-card">
+                            <div class="project_name">
+                                <div class="name">
+                                    <h1>Code Quiz</h1>
+                                    <em>Front End</em>
+                                </div>
+                                <div class="projects_link">
+                                    <a href="https://yuniksung.github.io/codeQuiz/" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/yuniksung/codeQuiz" target="_blank">
+                                        <i class="fab fa-github-square"></i>
+                                    </a>
+                                </div>
+    
+                            </div>
+                            <div class="project_image">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/codeQuiz.gif" alt="meal-Q">
+                                </button>
+                            </div>
+                            <div class="project_info">
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span> HTML, CSS, JavaScript
+                                    </p>
+                                    
+                                </div>
+                                <p>The Coding Quiz Challenge contains 5 questions, on each you have 4 multiple choice options.</p>
+                            </div>
+    
+                        </div>
+                        <div class="project-card">
+                            <div class="project_name">
+                                <div class="name">
+                                    <h1>Work Day Scheduler</h1>
+                                    <em>Front End</em>
+                                </div>
+                                <div class="projects_link">
+                                    <a href="https://yuniksung.github.io/work-day-scheduler/" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/yuniksung/work-day-scheduler" target="_blank">
+                                        <i class="fab fa-github-square"></i>
+                                    </a>
+                                </div>
+    
+                            </div>
+                            <div class="project_image">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/wds.jpg" alt="meal-Q">
+                                </button>
+                            </div>
+                            <div class="project_info">
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span> HTML, CSS, JavaScript, jQuery
+                                    </p>
+                                    
+                                </div>
+                                <p>Create a simple work-day-scheduler calendar application that allows for user to enter tasks/events for that hour in the text area and save events for each hour of the day.</p>
+                            </div>
+    
+                        </div>    
+                    </div>
+
+
+                    <!-- back ends -->
+                    <div id="backEnds" class="workBox">
+                        <div class="project-card">
+                            <div class="project_name">
+                                <div class="name">
+                                    <h1>Music Line</h1>
+                                    <em>Back End</em>
+                                </div>
+                                <div class="projects_link">
+                                    <a href="https://guarded-dawn-15470.herokuapp.com/" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/axeliono/Music-Line/" target="_blank">
+                                        <i class="fab fa-github-square"></i>
+                                    </a>
+                                </div>
+    
+                            </div>
+                            <div class="project_image">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/ml.jpg" alt="meal-Q">
+                                </button>
+                            </div>
+                            <div class="project_info">
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span>Node.js, Express.js, Sequelize, Handlebars
+                                    </p>
+                                    
+                                </div>
+                                <p>E-Commerce site allowing for purchase and rental of music products</p>
+                            </div>
+    
+                        </div>
+                        
+                        <div class="project-card">
+                            <div class="project_name">
+                                <div class="name">
+                                    <h1>budget Tracker</h1>
+                                    <em>Back End</em>
+                                </div>
+                                <div class="projects_link">
+                                    <a href="https://mighty-spire-18288.herokuapp.com/" target="_blank"> 
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/yuniksung/budget-tracker" target="_blank">
+                                        <i class="fab fa-github-square"></i>
+                                    </a>
+                                </div>
+    
+                            </div>
+                            <div class="project_image">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/bt.png" alt="meal-Q">
+                                </button>
+                            </div>
+                            <div class="project_info">
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span> Mongoose, Node.js, Express.js
+                                    </p>
+                                </div>
+                                <p>This application allows the user to track their withdrawals and deposits on a computer or mobile device with or without an internet connection.</p>
+                            </div>
+    
+                        </div>    
+                        <div class="project-card">
+                            <div class="project_name">
+                                <div class="name">
+                                    <h1>NOTE TAKR</h1>
+                                    <em>Back End</em>
+                                </div>
+                                <div class="projects_link">
+                                    <a href="https://yuniknotetakr.herokuapp.com/" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/yuniksung/note_taker" target="_blank">
+                                        <i class="fab fa-github-square"></i>
+                                    </a>
+                                </div>
+    
+                            </div>
+                            <div class="project_image">
+                                <button id="modalBtn">
+                                    <img src="./assets/images/nt.jpg" alt="meal-Q">
+                                </button>
+                            </div>
+                            <div class="project_info">
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span> Node.js, Express.js, JQuery, AJAX, Heroku
+                                    </p>
+                                    
+                                </div>
+                                <p>The goal was to build an application that allows the user to create, save, and delete notes which runs on a server.
+                                </p>
+                            </div>
+    
+                        </div>    
+                    </div>
+
+                </div>
+
+
+                </div>
+            </div>
+
+        </div>
     </main>
 
     <!-- footer with all my contact information -->
     <footer id="contact">
-
+        <div class="wrapper">
+            <a href="https://github.com/yuniksung/portfolio-v5" target="_blank">
+                <p>Contributed by Yunik Sung</p>
+                <p>yuniksung@gmail.com</p>
+            </a>
+        </div>
     </footer>
 
     <script src="./assets/javascript/index.js"></script>

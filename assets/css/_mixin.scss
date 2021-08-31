@@ -1,13 +1,11 @@
-$pastel-blue: #8bacd1;
-$pastel-blue2: #b8c7d4;
-$pastel-blue3: #C1D1DB;
-$white: #fff;
 
-$about: #f0f5f7;
-$nav: #dadada;
-$btn-hover: #ebebeb;
-
-$btn-color:#C1D1DB;
+$bg: #91C7B1;
+$bg0: #D9EBDE;
+$bg1: #F1F7ED;
+$bg2:#34745B;
+$yellow: #E3D081;
+$red: #B33951;
+$black: #54494B;
 
 // box-shadow
 $boxShadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -15,14 +13,28 @@ $hoveredBoxShadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 // transition
 $boxHoverEffect:  all 0.3s cubic-bezier(.25,.8,.25,1);
 
+// clip-path
+@mixin rightDown{
+    clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
+};
+
+@mixin leftDown{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
+}
 
 // Hovering effects
 @mixin containerShadow{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: -18px 1px 38px -25px rgba(0,0,0,1);
+    -webkit-box-shadow: -18px 1px 38px -25px rgba(0,0,0,1);
+    -moz-box-shadow: -18px 1px 38px -25px rgba(0,0,0,1);
+    background-color: rgb(250, 253, 252);
+    // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     transition: all 1.35s cubic-bezier(.25,.8,.25,1);
 
     &:hover{
-        box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        box-shadow: -11px 1px 45px -30px rgba(0,0,0,1);
+        -webkit-box-shadow: -11px 1px 45px -30px rgba(0,0,0,1);
+        -moz-box-shadow: -11px 1px 45px -30px rgba(0,0,0,1);
     }
 }
 
@@ -42,7 +54,7 @@ $boxHoverEffect:  all 0.3s cubic-bezier(.25,.8,.25,1);
 
     transform: perspective(3000px) rotateY(5deg);
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    // box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     transition: transform 1s ease 0s;
   
     &:hover {
@@ -88,4 +100,17 @@ $boxHoverEffect:  all 0.3s cubic-bezier(.25,.8,.25,1);
     width: 100%;
     margin: auto;
     @include flexCent;
+}
+
+
+@mixin wrapperDefaultSetting{
+    height: 100%;
+    width: 70%;
+    margin: auto;
+    padding-top: 75px; 
+}
+
+@mixin pageDefaultSetting{
+    box-shadow:2px 8px 10px #001a446c;
+    // border-bottom: 3px solid #358acf;
 }

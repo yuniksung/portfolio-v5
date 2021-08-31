@@ -1,52 +1,146 @@
 @import './mixin';
 
+header{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $bg;
 
-.hero{
+    // Not toggled
+    .my-box{
+        height: 95%;
+        @include flexCent;
 
-    @include globalContainer;
-
-    .hero-shape{
-        width: 100%;
-        height: 100%;
-        border-radius: 50px;
-        background: url('../images/hero1.jpg');
-        background-position: center;
-        background-size: cover;
-
-        .bg{
-
-            @include globalShape;
-        }
-        .hero-text{
-            width: 60%;
-            margin: auto;
-            font-family: 'Roboto Mono', sans-serif;
-
-            color: $white;
+        .hero-wrapper{
+            overflow: hidden;
+            width: 30vw;
+            height: 15vh;
+            background-color: #FFFFFF;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            transition: height 0.5s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px;
     
-            h1{
-                
-                font-size: 3rem;
-            }
-            p{
-                font-size: 1.2rem;
-                margin: 2px 0;
-                
+            .unshow-box{
+                display: flex;
+                align-items: center;
+                width: 100%;
+        
+        
+                .inactive{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+        
+                    .my-pic{
+                        position: relative;
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        border: 3px solid $black;
+        
+                        img{
+                            position: absolute;
+                            object-fit: cover;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+    
+                        }
+                    }
+        
+                    .hero-textBox{
+                        margin-left: 40px;
+                        padding-left: 20px;
+                        border-left: 1px solid lightgray;
+                        h2{
+                            font-size: 2rem;
+                            letter-spacing: 1.1px;
+                            color: $black;
+                        }
+                        h3{
+                            font-size: 1rem;
+                            padding: 10px 0;
+                            letter-spacing: 1.1px;
+                            color: $black;
+                        }
+                    }
+                }
+        
+                .down-icon{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    width: 150px;
+                    height: 100%;
+                    transition: transform 0.35s;
+                    i{
+                        color: $red;
+                        font-size: 2.5rem;
+                    }
+                }
             }
     
-            button{
-                width: 100px;
-                padding: 5px 10px;
-                margin-top: 10px;
-                border: none;
-                cursor: pointer;
-                background-color: $btn-color;
-                
+            .show-box{
+                height: 100%;
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                transition: 3s;
+                border-top: 1px solid lightgray;
+                padding: 20px;
+    
+                p{
+                    font-size: 1.2rem;
+                    line-height: 120%;
+                    margin-top: 1rem;
+                    letter-spacing: 1px;
+                    color: $black;
+    
+                    span{
+                        color: $red;
+                        font-weight: 500;
+                    }
+                }
             }
+    
         }
+            // Toggled
+                .active{
+                    height: 45vh;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    
+                    // icon upside down
+                    .down-icon{
+                        transition: transform 0.35s;
+                        i{
+                            color: $red;
+                            transform: rotate(180deg)
+                        }
+                    }
+                } 
+            }
     }
-    
-}
+
+
+
+
+
+
+
+
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap');

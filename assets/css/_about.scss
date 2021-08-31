@@ -1,70 +1,118 @@
 @import './mixin';
 
-#about-me{
-    width: 100%;
-    height: 55vh;
+.about{
+    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%);
+    font-weight: 300;
+    width: 100vw;
+    height: 90vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: $bg1;
 
-    background-color: $about;
-
-    .me-description{
-        width: 30%;
-        margin: 0 3% 0 auto;
-
-        h1{
-            width: 140px;
-            background: linear-gradient(45deg, $about 90%, #7AA0CB 80%);
-            text-transform: uppercase;
-
-            &:hover{
-                background: linear-gradient(45deg, $about 90%, #0360ca 80%);
-
-            }
-        }
-
-        p{
-            letter-spacing: 1px;
-            line-height: 140%;
-
-            span{
-                color: #268d43;
-                font-weight: 600;
-            }
-        }
-    }
-
-    .skills{
-        width: 40%;
-        margin: 0 auto 0 3%;
+    .wrapper{
+        @include wrapperDefaultSetting;
         display: flex;
+        flex-direction: column;
 
-        .skill-tree{
-            padding: 0 30px;
-
-
-
-            h3{
-                text-transform: uppercase;
-                margin-bottom: 10px;
-                padding: 2px;
-                background: linear-gradient(45deg, $pastel-blue3 75%, $about 80%);
+        .header{
+            width: 35%;
+            height: auto;
+            
+            h1{
+                font-size: 3rem;
+                letter-spacing: 3px;
             }
-            ul{
-    
-                li{
-                    width: 150px;
-                    list-style: none;
-                    padding: 2px 0;
-                    letter-spacing: 1px;
+        }
+        
+        .about-box{
+            margin-top: 60px;
+            width: 100%; 
+            height: 60%;
+            display: flex;;
+            justify-content: space-between;
+            align-items: center;
 
-                    &:hover{
-                        background-color: $btn-hover;
-                    }   
+            .mybox{
+                margin: 20px;
+                width: 45%;
+                height: 100%;
+                border-radius: 15px;
+                padding: 2.5rem;
+                @include containerShadow;
+                background-color: #fff;
+                h3{
+                    font-size: 2rem;
+                    font-weight: 300;
+                    letter-spacing: 2px;
+                    margin-bottom: 20px;
                 }
             }
 
+            .talents{
+                display: flex;
+                flex-direction: column;
+
+                .cards{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .card{
+                        display: flex;
+                        margin-top: 15px;
+
+
+
+                        i{
+                            height: 15%;
+                            width: 10%;
+                            font-size: 25px;
+                        }
+
+                        .card-text{
+                            width: 80%;
+                            
+                            h4{
+                                font-weight: 400;
+                                text-transform: uppercase;
+                                letter-spacing: 1.5px;
+                            }
+
+                            p{
+                                margin-top: 2px;
+                                letter-spacing: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .skills{
+                display: flex;
+                flex-direction: column;
+
+
+
+                .skill-list{
+                    display: flex;
+
+                    ul{
+                        width: 100%;
+                        list-style: none;
+
+                        li{
+                            font-size: 1.1rem;
+                            letter-spacing: 1px;
+                            padding: 2px;
+
+                            &:nth-child(1){
+                                color: rgb(0, 82, 160);
+                                font-weight: 400;
+                                margin: 5px 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
 
