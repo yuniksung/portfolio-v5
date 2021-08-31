@@ -54,19 +54,19 @@ function displayProjects(select){
        }
 }
 
-// Pop up Modal
-modalBtn.addEventListener("click", function(){
-  modalContainer.style.display = "flex";
-});
+// // Pop up Modal
+// modalBtn.addEventListener("click", function(){
+//   modalContainer.style.display = "flex";
+// });
 
-// Close Modal
-closeBtn.addEventListener("click", function(){
-  modalContainer.style.display = "none";
-});
+// // Close Modal
+// closeBtn.addEventListener("click", function(){
+//   modalContainer.style.display = "none";
+// });
 
-modalContainer.addEventListener("click", function(){
-  modalContainer.style.display = "none";
-});
+// modalContainer.addEventListener("click", function(){
+//   modalContainer.style.display = "none";
+// });
  
 
 
