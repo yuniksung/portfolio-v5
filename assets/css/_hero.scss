@@ -9,10 +9,17 @@ header{
     flex-direction: column;
     background-color: $bg;
 
+    @include breakpoint(p320){
+        height: 80vh;
+    }
+
     // Not toggled
     .my-box{
         height: 95%;
         @include flexCent;
+        @include breakpoint(p320){
+            height: 100%;
+        }
 
         .hero-wrapper{
             overflow: hidden;
@@ -27,12 +34,18 @@ header{
             justify-content: flex-start;
             align-items: center;
             padding: 10px;
+
+            @include breakpoint(p320){
+                width: 95vw;
+                height: 11vh;
+            }
     
             .unshow-box{
                 display: flex;
                 align-items: center;
                 width: 100%;
         
+            
         
                 .inactive{
                     display: flex;
@@ -46,7 +59,13 @@ header{
                         border-radius: 50%;
                         overflow: hidden;
                         border: 3px solid $black;
-        
+
+                        @include breakpoint(p320){
+                            width: 120px;
+                            height: 80px;
+                        }
+
+
                         img{
                             position: absolute;
                             object-fit: cover;
@@ -62,16 +81,32 @@ header{
                         margin-left: 40px;
                         padding-left: 20px;
                         border-left: 1px solid lightgray;
+
+                        @include breakpoint(p320){
+                            margin-left: 15px;
+                            padding-left: 15px;
+                            width: 100%;
+                        }
+
                         h2{
                             font-size: 2rem;
                             letter-spacing: 1.1px;
                             color: $black;
+
+                            @include breakpoint(p320){
+                                font-size: 1.2rem;
+                                letter-spacing: 1px;
+                            }
                         }
                         h3{
                             font-size: 1rem;
                             padding: 10px 0;
                             letter-spacing: 1.1px;
                             color: $black;
+
+                            @include breakpoint(p320){
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
@@ -83,9 +118,18 @@ header{
                     width: 150px;
                     height: 100%;
                     transition: transform 0.35s;
+
+                    @include breakpoint(p320){
+                        width: 100px;
+                    }
+
                     i{
                         color: $red;
                         font-size: 2.5rem;
+
+                        @include breakpoint(p320){
+                            font-size: 1.5rem;
+                        }
                     }
                 }
             }
@@ -95,20 +139,37 @@ header{
                 margin-top: 20px;
                 display: flex;
                 flex-direction: column;
-                transition: 3s;
+                transition: 0.3s;
                 border-top: 1px solid lightgray;
                 padding: 20px;
-    
+                @include breakpoint(p320){
+                    padding: 0px;
+                    margin-top: 20px;
+                }
+
                 p{
                     font-size: 1.2rem;
                     line-height: 120%;
                     margin-top: 1rem;
                     letter-spacing: 1px;
                     color: $black;
+
+                    
+                    @include breakpoint(p320){
+                        font-size: 16px;
+                        line-height: 110%;
+                        word-spacing: 1px;
+                        letter-spacing: 0;
+                        white-space:pre-wrap;
+                    }
     
                     span{
                         color: $red;
                         font-weight: 500;
+
+                        @include breakpoint(p320){
+                            font-weight: 400;
+                        }
                     }
                 }
             }

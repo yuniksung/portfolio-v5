@@ -110,7 +110,34 @@ $boxHoverEffect:  all 0.3s cubic-bezier(.25,.8,.25,1);
     padding-top: 75px; 
 }
 
+@mixin wrapperP320Setting{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    padding-top: 45px; 
+}
+
 @mixin pageDefaultSetting{
     box-shadow:2px 8px 10px #001a446c;
     // border-bottom: 3px solid #358acf;
 }
+
+
+///////////////////////////////////////
+//          MEDIA QUERIES            //
+///////////////////////////////////////
+
+@mixin breakpoint($point) {
+    @if $point == p1024 {
+      @media (max-width: 1024px) {@content;}
+    }
+    @if $point == p770 {
+      @media (max-width: 770px) { @content; }
+    }
+    @else if $point == p550 {
+      @media (max-width: 550px) { @content; }
+    }
+    @else if $point == p320{
+      @media (max-width: 320px){ @content; }
+    }
+  };

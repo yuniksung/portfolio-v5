@@ -104,28 +104,37 @@
                 </section>
                 <section class="skills mybox">
                     <h3>Skills</h3>
-                    <div class="skill-list">
-                        <ul>
-                            <li>FRONT ENDS</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>SASS/LESS</li>
-                            <li>JAVASCRIPT</li>
-                            <li>REACT.JS</li>
-                        </ul>
-                        <ul>
-                            <li>BACK ENDS</li>
-                            <li>NODE.JS</li>
-                            <li>EXPRESS.JS</li>
-                            <li>MYSQL</li>
-                        </ul>
-                        <ul>
-                            <li>OTHERS</li>
-                            <li>HEROKU</li>
-                            <li>GIT</li>
-                            <li>ADOBE SUITES</li>
-                            <li>MICROSOFT SUITES</li>
-                        </ul>
+                    <div class="skill-lists">
+                        <div class="skill">
+                            <p>Front End</p>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>SASS/LESS</li>
+                                <li>JAVASCRIPT</li>
+                                <li>REACT.JS</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill">
+                            <p>Back End</p>
+                            <ul>
+                                <li>NODE.JS</li>
+                                <li>EXPRESS.JS</li>
+                                <li>MYSQL</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill">
+                            <p>Other</p>
+                            <ul>
+                                <li>HEROKU</li>
+                                <li>GIT</li>
+                                <li>ADOBE SUITES</li>
+                                <li>MICROSOFT SUITES</li>
+                            </ul>
+                        </div>
+
                     </div>
                 </section>
             </article>
@@ -140,7 +149,7 @@
                 <p>I am currently looking for a new opportunity. If you have any concern, please do not hesitate to contact me</p>
 
                 <div class="clipboard">
-                    <p id="myEmail">yuniksung@gmail.com</p>
+                    <a id="myEmail" href="mailto:yuniksung@gmail.com" rel="noreferrer">yuniksung@gmail.com</a>
                     <button onclick="copyToClipboard('myEmail')">
                         <p>Copy Email</p>
                         <i class="far fa-clone"></i>
@@ -149,18 +158,6 @@
             </div>
 
             <div class="contact-icons">
-                <div class="email link">
-                    <a href="mailto:yuniksung@gmail.com" rel="noreferrer">
-                        <div class="link-p">
-                            <p>
-                                Email
-                            </p>
-                        </div>
-                        <div class="i">
-                            <i class="far fa-envelope"></i>
-                        </div>
-                    </a>
-                </div>
     
                 <div class="github link">
                     <a href="https://github.com/yuniksung" target="_blank">
@@ -253,41 +250,6 @@
                                     <img src="./assets/images/mealq.jpg" alt="meal-Q">
                                 </button>
 
-                                <!-- Modal Up -->
-                                <!-- <div class="modal" id="modal">
-                                    <div class="wrapper">
-                                        <section class="img-box">
-                                            <img src="./assets/images/mealq.jpg" alt="meal-Q">
-                                        </section>
-                                        <aside class="modal-side">
-                                            <div class="closeBtn" id="closeBtn">
-                                               <button id="closeBtn">
-                                                <i class="fas fa-times"></i>
-                                               </button>
-                                            </div>
-                                            <div class="description">
-                                                <h1>
-                                                    Name
-                                                </h1>
-                                                <h3>
-                                                    Front End
-                                                </h3>
-                                                <p>
-                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum natus molestiae maiores, deserunt ea, facilis culpa officiis dicta libero quod suscipit earum, repellat ex omnis recusandae nam illum? Similique, nulla.
-                                                </p>
-                                                <p class="languages">
-                                                   <ul>
-                                                       <li>HTML</li>
-                                                       <li>SASS</li>
-                                                       <li>JAVASCRIPT</li>
-                                                       <li>REST API</li>
-                                                   </ul> 
-                                                </p>
-                                            </div>
-                                        </aside>
-                                    </div>
-                                </div> -->
-
                             </div>
                             <div class="project_info">
                                 <div class="languages">
@@ -356,24 +318,52 @@
                             <div class="project_info">
                                 <div class="languages">
                                     <p>
-                                        <span>Languages:</span> HTML, CSS, JavaScript, jQuery
+                                        <span>Languages:</span> HTML, SASS
                                     </p>
                                     
                                 </div>
-                                <p>Create a simple work-day-scheduler calendar application that allows for user to enter tasks/events for that hour in the text area and save events for each hour of the day.</p>
+                                <p>Found a non mobile friend website so I've added.</p>
                             </div>
     
                         </div>    
-                    </div>
-
-
-                    <!-- back ends -->
-                    <div id="backEnds" class="workBox">
                         <div class="project-card">
                             <div class="project_name">
                                 <div class="name">
+                                    <h1>Typing Master</h1>
+                                    <em>Front End</em>
+                                </div>
+                                <div class="projects_link">
+                                    <a href="https://yuniksung.github.io/typing_Game/" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/yuniksung/typing_Game" target="_blank">
+                                        <i class="fab fa-github-square"></i>
+                                    </a>
+                                </div>
+    
+                            </div>
+                            <div class="project_image">
+                                <button id="modalBtn">
+                                    <img src="https://github.com/yuniksung/typing_Game/raw/main/images/ss.jpg?raw=true" alt="meal-Q">
+                                </button>
+                            </div>
+                            <div class="project_info">
+                                <div class="languages">
+                                    <p>
+                                        <span>Languages:</span> HTML, CSS, JavaScript
+                                    </p>
+                                    
+                                </div>
+                                <p>Speed typing game</p>
+                            </div>
+                        </div>    
+
+                        <div class="project-card">
+
+                            <div class="project_name">
+                                <div class="name">
                                     <h1>Music Line</h1>
-                                    <em>Back End</em>
+                                    <em>Front End</em>
                                 </div>
                                 <div class="projects_link">
                                     <a href="https://guarded-dawn-15470.herokuapp.com/" target="_blank">
@@ -401,6 +391,14 @@
                             </div>
     
                         </div>
+
+                    </div>
+
+
+                    <!-- back ends -->
+                    <div id="backEnds" class="workBox">
+
+                        
                         
                         <div class="project-card">
                             <div class="project_name">

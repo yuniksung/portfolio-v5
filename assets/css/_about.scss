@@ -8,18 +8,36 @@
     display: flex;
     background-color: $bg1;
 
+    @include breakpoint(p320){
+        height: 100vh;
+    }
+
     .wrapper{
         @include wrapperDefaultSetting;
         display: flex;
         flex-direction: column;
 
+        @include breakpoint(p320){
+            @include wrapperP320Setting;
+        }
+
         .header{
             width: 35%;
             height: auto;
+
+            @include breakpoint(p320){
+                width: 90%;
+            }
             
             h1{
                 font-size: 3rem;
                 letter-spacing: 3px;
+
+                @include breakpoint(p320){
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+
             }
         }
         
@@ -31,6 +49,13 @@
             justify-content: space-between;
             align-items: center;
 
+            @include breakpoint(p320){
+                margin-top: 30px;
+                flex-direction: column;
+                height: 50%;
+                align-items: flex-start;
+            }
+
             .mybox{
                 margin: 20px;
                 width: 45%;
@@ -39,11 +64,25 @@
                 padding: 2.5rem;
                 @include containerShadow;
                 background-color: #fff;
+
+                @include breakpoint(p320){
+                    margin: 10px 0;
+                    width: 100%;
+                    padding: 1.5rem;
+                }
+
                 h3{
                     font-size: 2rem;
                     font-weight: 300;
                     letter-spacing: 2px;
                     margin-bottom: 20px;
+
+                    @include breakpoint(p320){
+                        font-size: 1.5rem;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        margin-bottom: 0;
+                    }
                 }
             }
 
@@ -61,25 +100,48 @@
                         margin-top: 15px;
 
 
+                        @include breakpoint(p320){
+                            justify-content: center;
+                            align-items: center;
+                        }
 
                         i{
                             height: 15%;
                             width: 10%;
                             font-size: 25px;
+
+                            @include breakpoint(p320){
+                                width: 0;
+                                height: 0;
+                                display: none;
+                            }
                         }
 
                         .card-text{
                             width: 80%;
+
+                            @include breakpoint(p320){
+                                width: 100%;
+                            }
                             
                             h4{
                                 font-weight: 400;
                                 text-transform: uppercase;
                                 letter-spacing: 1.5px;
+
+                                @include breakpoint(p320){
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                }
                             }
 
                             p{
                                 margin-top: 2px;
                                 letter-spacing: 1px;
+
+                                @include breakpoint(p320){
+                                    font-size: 14px;
+                                }
                             }
                         }
                     }
@@ -92,25 +154,59 @@
 
 
 
-                .skill-list{
+                .skill-lists{
                     display: flex;
 
-                    ul{
+                    @include breakpoint(p320){
+                        flex-direction: column;
+                    }
+
+                    .skill{
                         width: 100%;
-                        list-style: none;
 
-                        li{
-                            font-size: 1.1rem;
-                            letter-spacing: 1px;
-                            padding: 2px;
+                        p{
+                            font-size: 1.5rem;
+                            margin-bottom: 10px;
+                            text-transform: uppercase;
+                            color: $red;
 
-                            &:nth-child(1){
-                                color: rgb(0, 82, 160);
+                            @include breakpoint(p320){
+                                margin-top: 5px;
+                                font-size: 15px;
                                 font-weight: 400;
-                                margin: 5px 0;
+                                margin-bottom: 0;
+                            }
+                        }
+
+
+                        ul{
+                            width: 100%;
+                            list-style: none;
+    
+                            @include breakpoint(p320){
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                            }
+    
+                            li{
+                                font-size: 1.1rem;
+                                letter-spacing: 1px;
+                                padding: 2px;
+
+                                @include breakpoint(p320){
+                                    padding: 0 2px;
+                                    font-size: 14px;
+
+                                    &::after{
+                                        content: "."
+                                    }
+                                }
                             }
                         }
                     }
+
+                    
                 }
             }
         }

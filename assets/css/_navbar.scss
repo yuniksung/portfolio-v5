@@ -8,12 +8,21 @@
     width: 100%;
     display: block;
     transition: top 0.3s;
-    background-color: $bg1;
+    // background-color: $bg1;
     background-color: $black;
+
+    @include breakpoint(p320){
+        top: 0px;
+        width: 100vw;
+    }
 
     ul{
         @include flexCent;
         height: 100%;
+
+        @include breakpoint(p320){
+            flex-wrap: wrap;
+        }
 
         a{
             @include flexCent;
@@ -24,6 +33,11 @@
             text-transform: uppercase;
             transition: $boxHoverEffect;
 
+            @include breakpoint(p320){
+                font-weight: 300;
+                font-size: 12px;
+            }
+
             &:hover{
                 box-shadow: 0 1.5px 3px rgba(0,0,0,0.16), 0 1.5px 3px rgba(0,0,0,0.23);
             }
@@ -31,6 +45,10 @@
             li{
                 padding: 0 70px;
                 list-style: none;
+
+                @include breakpoint(p320){
+                    padding: 0 15px;
+                }
             }
 
             .resume-nav{

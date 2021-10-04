@@ -10,11 +10,23 @@ header {
   background-color: #91C7B1;
 }
 
+@media (max-width: 320px) {
+  header {
+    height: 80vh;
+  }
+}
+
 header .my-box {
   height: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 320px) {
+  header .my-box {
+    height: 100%;
+  }
 }
 
 header .my-box .hero-wrapper {
@@ -30,6 +42,13 @@ header .my-box .hero-wrapper {
   justify-content: flex-start;
   align-items: center;
   padding: 10px;
+}
+
+@media (max-width: 320px) {
+  header .my-box .hero-wrapper {
+    width: 95vw;
+    height: 11vh;
+  }
 }
 
 header .my-box .hero-wrapper .unshow-box {
@@ -53,6 +72,13 @@ header .my-box .hero-wrapper .unshow-box .inactive .my-pic {
   border: 3px solid #54494B;
 }
 
+@media (max-width: 320px) {
+  header .my-box .hero-wrapper .unshow-box .inactive .my-pic {
+    width: 120px;
+    height: 80px;
+  }
+}
+
 header .my-box .hero-wrapper .unshow-box .inactive .my-pic img {
   position: absolute;
   object-fit: cover;
@@ -68,10 +94,25 @@ header .my-box .hero-wrapper .unshow-box .inactive .hero-textBox {
   border-left: 1px solid lightgray;
 }
 
+@media (max-width: 320px) {
+  header .my-box .hero-wrapper .unshow-box .inactive .hero-textBox {
+    margin-left: 15px;
+    padding-left: 15px;
+    width: 100%;
+  }
+}
+
 header .my-box .hero-wrapper .unshow-box .inactive .hero-textBox h2 {
   font-size: 2rem;
   letter-spacing: 1.1px;
   color: #54494B;
+}
+
+@media (max-width: 320px) {
+  header .my-box .hero-wrapper .unshow-box .inactive .hero-textBox h2 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
 }
 
 header .my-box .hero-wrapper .unshow-box .inactive .hero-textBox h3 {
@@ -79,6 +120,12 @@ header .my-box .hero-wrapper .unshow-box .inactive .hero-textBox h3 {
   padding: 10px 0;
   letter-spacing: 1.1px;
   color: #54494B;
+}
+
+@media (max-width: 320px) {
+  header .my-box .hero-wrapper .unshow-box .inactive .hero-textBox h3 {
+    font-size: 12px;
+  }
 }
 
 header .my-box .hero-wrapper .unshow-box .down-icon {
@@ -90,9 +137,21 @@ header .my-box .hero-wrapper .unshow-box .down-icon {
   transition: transform 0.35s;
 }
 
+@media (max-width: 320px) {
+  header .my-box .hero-wrapper .unshow-box .down-icon {
+    width: 100px;
+  }
+}
+
 header .my-box .hero-wrapper .unshow-box .down-icon i {
   color: #B33951;
   font-size: 2.5rem;
+}
+
+@media (max-width: 320px) {
+  header .my-box .hero-wrapper .unshow-box .down-icon i {
+    font-size: 1.5rem;
+  }
 }
 
 header .my-box .hero-wrapper .show-box {
@@ -100,9 +159,16 @@ header .my-box .hero-wrapper .show-box {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  transition: 3s;
+  transition: 0.3s;
   border-top: 1px solid lightgray;
   padding: 20px;
+}
+
+@media (max-width: 320px) {
+  header .my-box .hero-wrapper .show-box {
+    padding: 0px;
+    margin-top: 20px;
+  }
 }
 
 header .my-box .hero-wrapper .show-box p {
@@ -113,9 +179,25 @@ header .my-box .hero-wrapper .show-box p {
   color: #54494B;
 }
 
+@media (max-width: 320px) {
+  header .my-box .hero-wrapper .show-box p {
+    font-size: 16px;
+    line-height: 110%;
+    word-spacing: 1px;
+    letter-spacing: 0;
+    white-space: pre-wrap;
+  }
+}
+
 header .my-box .hero-wrapper .show-box p span {
   color: #B33951;
   font-weight: 500;
+}
+
+@media (max-width: 320px) {
+  header .my-box .hero-wrapper .show-box p span {
+    font-weight: 400;
+  }
 }
 
 header .my-box .active {
@@ -142,8 +224,14 @@ header .my-box .active .down-icon i {
   width: 100%;
   display: block;
   transition: top 0.3s;
-  background-color: #F1F7ED;
   background-color: #54494B;
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    top: 0px;
+    width: 100vw;
+  }
 }
 
 .navbar ul {
@@ -151,6 +239,12 @@ header .my-box .active .down-icon i {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+@media (max-width: 320px) {
+  .navbar ul {
+    flex-wrap: wrap;
+  }
 }
 
 .navbar ul a {
@@ -165,6 +259,13 @@ header .my-box .active .down-icon i {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+@media (max-width: 320px) {
+  .navbar ul a {
+    font-weight: 300;
+    font-size: 12px;
+  }
+}
+
 .navbar ul a:hover {
   box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.16), 0 1.5px 3px rgba(0, 0, 0, 0.23);
 }
@@ -172,6 +273,12 @@ header .my-box .active .down-icon i {
 .navbar ul a li {
   padding: 0 70px;
   list-style: none;
+}
+
+@media (max-width: 320px) {
+  .navbar ul a li {
+    padding: 0 15px;
+  }
 }
 
 .navbar ul a .resume-nav {
@@ -187,6 +294,12 @@ header .my-box .active .down-icon i {
   background-color: #F1F7ED;
 }
 
+@media (max-width: 320px) {
+  .about {
+    height: 100vh;
+  }
+}
+
 .about .wrapper {
   height: 100%;
   width: 70%;
@@ -196,14 +309,36 @@ header .my-box .active .down-icon i {
   flex-direction: column;
 }
 
+@media (max-width: 320px) {
+  .about .wrapper {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    padding-top: 45px;
+  }
+}
+
 .about .wrapper .header {
   width: 35%;
   height: auto;
 }
 
+@media (max-width: 320px) {
+  .about .wrapper .header {
+    width: 90%;
+  }
+}
+
 .about .wrapper .header h1 {
   font-size: 3rem;
   letter-spacing: 3px;
+}
+
+@media (max-width: 320px) {
+  .about .wrapper .header h1 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
 }
 
 .about .wrapper .about-box {
@@ -213,6 +348,15 @@ header .my-box .active .down-icon i {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 320px) {
+  .about .wrapper .about-box {
+    margin-top: 30px;
+    flex-direction: column;
+    height: 50%;
+    align-items: flex-start;
+  }
 }
 
 .about .wrapper .about-box .mybox {
@@ -235,11 +379,28 @@ header .my-box .active .down-icon i {
   -moz-box-shadow: -11px 1px 45px -30px black;
 }
 
+@media (max-width: 320px) {
+  .about .wrapper .about-box .mybox {
+    margin: 10px 0;
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
+
 .about .wrapper .about-box .mybox h3 {
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 2px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 320px) {
+  .about .wrapper .about-box .mybox h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+  }
 }
 
 .about .wrapper .about-box .talents {
@@ -258,14 +419,35 @@ header .my-box .active .down-icon i {
   margin-top: 15px;
 }
 
+@media (max-width: 320px) {
+  .about .wrapper .about-box .talents .cards .card {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .about .wrapper .about-box .talents .cards .card i {
   height: 15%;
   width: 10%;
   font-size: 25px;
 }
 
+@media (max-width: 320px) {
+  .about .wrapper .about-box .talents .cards .card i {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+
 .about .wrapper .about-box .talents .cards .card .card-text {
   width: 80%;
+}
+
+@media (max-width: 320px) {
+  .about .wrapper .about-box .talents .cards .card .card-text {
+    width: 100%;
+  }
 }
 
 .about .wrapper .about-box .talents .cards .card .card-text h4 {
@@ -274,9 +456,22 @@ header .my-box .active .down-icon i {
   letter-spacing: 1.5px;
 }
 
+@media (max-width: 320px) {
+  .about .wrapper .about-box .talents .cards .card .card-text h4 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
 .about .wrapper .about-box .talents .cards .card .card-text p {
   margin-top: 2px;
   letter-spacing: 1px;
+}
+
+@media (max-width: 320px) {
+  .about .wrapper .about-box .talents .cards .card .card-text p {
+    font-size: 14px;
+  }
 }
 
 .about .wrapper .about-box .skills {
@@ -284,25 +479,63 @@ header .my-box .active .down-icon i {
   flex-direction: column;
 }
 
-.about .wrapper .about-box .skills .skill-list {
+.about .wrapper .about-box .skills .skill-lists {
   display: flex;
 }
 
-.about .wrapper .about-box .skills .skill-list ul {
+@media (max-width: 320px) {
+  .about .wrapper .about-box .skills .skill-lists {
+    flex-direction: column;
+  }
+}
+
+.about .wrapper .about-box .skills .skill-lists .skill {
+  width: 100%;
+}
+
+.about .wrapper .about-box .skills .skill-lists .skill p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #B33951;
+}
+
+@media (max-width: 320px) {
+  .about .wrapper .about-box .skills .skill-lists .skill p {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+}
+
+.about .wrapper .about-box .skills .skill-lists .skill ul {
   width: 100%;
   list-style: none;
 }
 
-.about .wrapper .about-box .skills .skill-list ul li {
+@media (max-width: 320px) {
+  .about .wrapper .about-box .skills .skill-lists .skill ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.about .wrapper .about-box .skills .skill-lists .skill ul li {
   font-size: 1.1rem;
   letter-spacing: 1px;
   padding: 2px;
 }
 
-.about .wrapper .about-box .skills .skill-list ul li:nth-child(1) {
-  color: #0052a0;
-  font-weight: 400;
-  margin: 5px 0;
+@media (max-width: 320px) {
+  .about .wrapper .about-box .skills .skill-lists .skill ul li {
+    padding: 0 2px;
+    font-size: 14px;
+  }
+  .about .wrapper .about-box .skills .skill-lists .skill ul li::after {
+    content: ".";
+  }
 }
 
 main {
@@ -366,7 +599,7 @@ main .wrapper .show-works .project-box .workBox {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 main .wrapper .show-works .project-box .workBox .project-card {
@@ -384,7 +617,7 @@ main .wrapper .show-works .project-box .workBox .project-card {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin: 20px 0;
+  margin: 3rem;
 }
 
 main .wrapper .show-works .project-box .workBox .project-card:hover {
@@ -417,7 +650,7 @@ main .wrapper .show-works .project-box .workBox .project-card .project_name .pro
   height: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-ar;
 }
 
 main .wrapper .show-works .project-box .workBox .project-card .project_name .projects_link a {
@@ -606,17 +839,23 @@ footer .wrapper a:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+  margin-right: 2rem;
 }
 
 .my-links .wrapper .personal-info h3 {
-  font-weight: 200;
+  font-weight: 400;
   font-size: 2rem;
 }
 
-.my-links .wrapper .personal-info p {
+.my-links .wrapper .personal-info p, .my-links .wrapper .personal-info a {
   letter-spacing: 1.1px;
   line-height: 130%;
-  font-weight: 300;
+  font-weight: 400;
+}
+
+.my-links .wrapper .personal-info a {
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .my-links .wrapper .personal-info .clipboard {
@@ -650,7 +889,7 @@ footer .wrapper a:hover {
   margin-left: auto;
   padding-left: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border-left: 1px solid #F1F7ED;
 }
